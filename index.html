@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="images/png" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Imbue:opsz@10..100&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>HSE-Maters Home Page</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+</head>
+
+<body>
+  <header class="navbar container">
+    <div class="navbar__row">
+      <div class="navbar__upper">
+        <img src="images/hsemaster.jpg" alt="" class="navbar__logo" width="100px">
+        <div class="navbar__upper-content">
+          <ul role="list" class="navbar__contact-list">
+            <!-- Email Support -->
+            <li class="navbar__contact-item">
+              <span class="navbar__icon">
+                <i class="fa fa-envelope navbar__icon-item"></i>
+              </span>
+              <div class="navbar__contact-content">
+                <a href="mailto:info@hsemastersltd.com" class="navbar__contact-title fs-400 fw-bold">Email Support</a>
+                <span class="navbar__contact-text fs-400">info@hsemastersltd.com</span>
+              </div>
+            </li>
+
+            <!-- Call Support -->
+            <li class="navbar__contact-item">
+              <span class="navbar__icon">
+                <i class="fa fa-volume-control-phone navbar__icon-item"></i>
+              </span>
+              <div class="navbar__contact-content">
+                <a href="tel:+62-123-6700-411" class="navbar__contact-title fs-400 fw-bold">Call Support</a>
+                <span class="navbar__contact-text fs-300">(+233) 50 943 8302</span>
+              </div>
+            </li>
+
+            <!-- Work Hours -->
+            <li class="navbar__contact-item">
+              <span class="navbar__icon">
+                <i class="fa fa-clock navbar__icon-item"></i>
+              </span>
+              <div class="navbar__contact-content">
+                <a href="#" class="navbar__contact-title fs-400 fw-bold">Work Hours</a>
+                <span class="navbar__contact-text fs-300">Mon - Fri 8:00 am - 5:00 pm</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <nav class="navbar__nav">
+        <ul class="navbar__nav-list">
+          <li class="navbar__nav-item">
+            <i class="fa fa-home navbar__nav-icon"></i>
+            <a href="" class="navbar__nav-link fs-400">Home</a>
+          </li>
+          <li class="navbar__nav-item">
+            <i class="fa fa-suitcase navbar__nav-icon"></i>
+            <a href="" class="navbar__nav-link fs-400">About</a>
+          </li>
+          <li class="navbar__nav-item">
+            <i class="fa fa-users navbar__nav-icon"></i>
+            <a href="" class="navbar__nav-link fs-400">Team</a>
+          </li>
+          <li class="navbar__nav-item">
+            <i class="fa fa-folder-open navbar__nav-icon"></i>
+            <a href="" class="navbar__nav-link fs-400">Services</a>
+          </li>
+          <li class="navbar__nav-item">
+            <i class="fa fa-home navbar__nav-icon"></i>
+            <a href="" class="navbar__nav-link fs-400">Projects</a>
+          </li>
+          <li class="navbar__nav-item">
+            <i class="fa fa-home navbar__nav-icon"></i>
+            <a href="" class="navbar__nav-link fs-400">Gallery</a>
+          </li>
+        </ul>
+        <div class="navbar__button">
+          <a href="" class="navbar__button-link openModal fs-400 fw-bold" data-modal="modal-course">Book a Course</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="intro__container">
+      <div class="container">
+        <div class="intro__content">
+          <h2 class="intro__title fs-primary-heading fw-bold ff-secondary">
+            One Stop Solution for
+          </h2>
+          <h2 class="intro__title intro__title-2 fs-primary-heading fw-bold ff-secondary">
+            All Things HSSEQ
+          </h2>
+          <p class="intro__text fs-700 fw-regular ff-secondary">Build skills with courses, certificates, and online
+            learning.</p>
+          <div class="intro__button">
+            <a href="" class="intro__button-link fs-500 fw-bold openModal ff-secondary" data-modal="modal-expert">Talk to an
+              Expert</a>
+            <a href="" class="intro__button-link openModal fs-500 fw-bold ff-secondary" data-modal="modal-quote">Ask for Quote</a>
+          </div>
+        </div>
+    </section>
+
+    <!--Modal-->
+
+    <div class="modal" id="modal-expert">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h3 class="modal__form-title ff-secondary fs-700 fw-bold">Talk to an Expert</h3>
+        <form>
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Last Name" required>
+          <input type="text" placeholder="Company Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Your Enquiry" required></textarea>
+          <div class="modal-checkbox">
+            <input type="checkbox" id="agreeCheckbox">
+            <label for="agreeCheckbox ff-secondary fs-300">
+              <span class="modal__checkbox--warning fw-bold ff-secondary fs-400">
+                I agree to receive other communications from HSE Masters Limited.
+              </span>
+              <br>
+              <br>
+              By clicking submit below, you agree to our Terms of Use and Privacy Policy. Additionally, you consent to
+              allow HSE Masters to store and process the personal information submitted above to provide you with the
+              content requested.
+            </label>
+          </div>
+          <button type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-quote">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h3 class="modal__form-title ff-secondary fs-700 fw-bold">Get a Quote</h3>
+        <form>
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Last Name" required>
+          <input type="text" placeholder="Company Name" required>
+          <input type="email" placeholder="Email" required>
+          <select required>
+            <option value="">Select Service</option>
+            <option value="training">Training</option>
+            <option value="iso-consultancy">ISO Consultancy</option>
+            <option value="hsse-software">HSSE Management Software</option>
+            <option value="ppe-provision">Provision of PPE</option>
+          </select>
+          <textarea placeholder="Additional Details" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-course">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h3 class="modal__form-title ff-secondary fs-700 fw-bold">Book a Course</h3>
+        <form>
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Last Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="text" placeholder="Phone Number" required>
+          <input type="text" placeholder="Organisation" required>
+          <select required>
+            <option value="">Select a Course</option>
+            <optgroup label="ISO Trainings">
+              <option value="iso-45001">ISO 45001 Lead Auditor Training</option>
+            </optgroup>
+            <optgroup label="Safety Trainings">
+              <option value="fire-safety">Basic Fire Safety</option>
+              <option value="first-aid">First Aid Training</option>
+            </optgroup>
+          </select>
+          <textarea placeholder="Specifications" required></textarea>
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services">
+      <div class="services__container">
+        <!-- First Column -->
+        <div class="services__column services__column--left">
+          <h2 class="services__heading fs-secondary-heading fw-bold ff-secondary">What We Do?</h2>
+          <img src="images/quest-image-2.jpg" alt="Cartoon Question"
+            class="services__image ff-secondary fw-bold fs-400" />
+        </div>
+
+        <!-- Second Column -->
+        <div class="services__column services__column--right">
+          <div class="services__card">
+            <a href="#training">
+              <div class="services__icon">📚</div>
+              <div class="services__title">Training</div>
+              <div class="services__description">Providing top-notch occupational health and safety training programs.
+              </div>
+            </a>
+          </div>
+          <div class="services__card">
+            <a href="#consultancy">
+              <div class="services__icon">💼</div>
+              <div class="services__title">Consultancy</div>
+              <div class="services__description">Expert consultancy services to ensure compliance and workplace safety.
+              </div>
+            </a>
+          </div>
+          <div class="services__card">
+            <a href="#technology">
+              <div class="services__icon">💻</div>
+              <div class="services__title">Technology</div>
+              <div class="services__description">Innovative tech solutions for monitoring and improving workplace
+                safety.</div>
+            </a>
+          </div>
+          <div class="services__card">
+            <a href="#supply">
+              <div class="services__icon">📦</div>
+              <div class="services__title">Supply</div>
+              <div class="services__description">Supplying high-quality safety equipment and materials.</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="featured-works">
+      <h1 class="ff-secondary fs-700 fw-bold">Featured <span>Works</span></h1>
+      <div class="works-carousel">
+        <div class="works-carousel__item">
+          <img src="images/feat-w-1.jpeg" alt="Training">
+          <div class="works-carousel__title">Training</div>
+          <div class="works-carousel__subtext">ISO Training, West Coast Gas</div>
+        </div>
+        <div class="works-carousel__item">
+          <img src="images/feat-work-2.jpeg" alt="Consultancy">
+          <div class="works-carousel__title">Consultancy</div>
+          <div class="works-carousel__subtext">HSSE Audits, XYZ Petroleum</div>
+        </div>
+        <div class="works-carousel__item">
+          <img src="images/feat-work-3.jpeg" alt="Technology">
+          <div class="works-carousel__title">Technology</div>
+          <div class="works-carousel__subtext">HSSE Software Implementation</div>
+        </div>
+        <div class="works-carousel__item">
+          <img src="images/feat-work-4.jpeg" alt="PPE Supply">
+          <div class="works-carousel__title">PPE Supply</div>
+          <div class="works-carousel__subtext">Safety Gear for ABC Construction</div>
+        </div>
+      </div>
+    </section>
+    <section class="statistics">
+      <div class="container">
+        <div class="stats-section">
+          <div class="stats-container">
+            <div class="stat">
+              <div class="number" data-target="200" data-suffix="+">0</div>
+              <div class="label fw-bold ff-secondary">Projects Completed</div>
+            </div>
+            <div class="stat">
+              <div class="number" data-target="40" data-suffix="+">0</div>
+              <div class="label fw-bold ff-secondary">Satisfied Clients</div>
+            </div>
+            <div class="stat">
+              <div class="number" data-target="10" data-suffix="+">0</div>
+              <div class="label fw-bold ff-secondary">Years of Experience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="clients-carousel">
+      <h3 class="ff-secondary fs-900 fw-bold">Clients</h3>
+      <div class="carousel">
+        <div><img src="images/Ghana-Gas_700x500-700x470.jpg" alt="Client 1"></div>
+        <div><img src="images/Maersk-Logo.jpg" alt="Client 2"></div>
+        <div><img src="images/abs-logo.png" alt="Client 3"></div>
+        <div><img src="images/gecric-integrity.png" alt="Client 4"></div>
+        <div><img src="images/acarp-logo.jpg" alt="Client 5"></div>
+        <div><img src="images/Siemens_Energy_logo.svg.png" alt="Client 6"></div>
+        <div><img src="images/irecop-logo.png" alt="Client 7"></div>
+      </div>
+    </section>
+    <section class="quote__section">
+      <div class="container quote__section-container">
+        <h1 class="quote__section-text ff-secondary fs-800 fw-bold">Let Us Help You</h1>
+        <div class="quote__section-button">
+          <a href="" class="quote__button-link openModal ff-secondary fs-600 fw-bold" data-modal="modal-quote">Get a
+            quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__column footer__column--logo">
+          <img src="images/hsemaster.jpg" alt="Company Logo">
+          <img src="images/ISO-9001.png" alt="ISO Certification Logo" class="footer__logo-iso">
+        </div>
+        <div class="footer__column footer__column--company">
+          <h3 class="footer__heading fs-600 ff-secondary">Company</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="#training">Training</a></li>
+            <li class="footer__list-item"><a href="#consultancy">Consultancy</a></li>
+            <li class="footer__list-item"><a href="#technology">Technology</a></li>
+            <li class="footer__list-item"><a href="#supply">Supply</a></li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--support">
+          <h3 class="footer__heading ff-secondary">Support</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">Contact: (+233) 123 456 789</li>
+            <li class="footer__list-item"><a href="#careers">Careers</a></li>
+            <li class="footer__list-item"><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--newsletter">
+          <h3 class="footer__heading ff-secondary">Never Miss Out</h3>
+          <p class="footer__column--text">Sign up to receive the latest HSEQ+ news and trends straight to your inbox
+            from HSE Masters.</p>
+          <form class="footer__form">
+            <input type="email" placeholder="Enter your email" class="footer__form--input" required>
+            <button type="submit" class="footer__form--button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__social-icons">
+          <a href="#linkedin"><i class="fab fa-linkedin"></i></a>
+          <a href="#facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="footer__legal">
+          <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms & Conditions</a>
+        </div>
+        <div class="footer__credits">
+          &copy; HSE Masters 2025. Site by Blake Infinity.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="src/stats.js"></script>
+</body>
+</html>
