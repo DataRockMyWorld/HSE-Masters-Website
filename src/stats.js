@@ -111,12 +111,10 @@ $(document).ready(function(){
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    const hamburger = document.querySelector('.navbar__hamburger');
-    const navList = document.querySelector('.navbar__nav-list');
-  
-    hamburger.addEventListener('click', function() {
-      // Toggle a class to show/hide the navigation list
-      navList.classList.toggle('active');
-    });
+
+  const hamburger = document.querySelector('.navbar__hamburger');
+  const nav = document.querySelector('.navbar__nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
   });
