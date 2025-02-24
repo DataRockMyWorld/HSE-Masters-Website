@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="images/png" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Imbue:opsz@10..100&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>HSE-Maters Home Page</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+</head>
+
+<body>
+  <header class="navbar container">
+    <div class="navbar__row">
+      <div class="navbar__upper">
+        <img src="images/hsemaster.jpg" alt="" class="navbar__logo" width="100px">
+        <div class="navbar__hamburger">
+          <i class="fa fa-bars"></i>
+        </div>
+        <div class="navbar__upper-content">
+          <ul role="list" class="navbar__contact-list">
+            <!-- Email Support -->
+            <li class="navbar__contact-item">
+              <span class="navbar__icon">
+                <i class="fa fa-envelope navbar__icon-item"></i>
+              </span>
+              <div class="navbar__contact-content">
+                <a href="mailto:info@hsemastersltd.com" class="navbar__contact-title fs-400 fw-bold">Email Support</a>
+                <span class="navbar__contact-text fs-400">info@hsemastersltd.com</span>
+              </div>
+            </li>
+
+            <!-- Call Support -->
+            <li class="navbar__contact-item">
+              <span class="navbar__icon">
+                <i class="fa fa-volume-control-phone navbar__icon-item"></i>
+              </span>
+              <div class="navbar__contact-content">
+                <a href="tel:+62-123-6700-411" class="navbar__contact-title fs-400 fw-bold">Call Support</a>
+                <span class="navbar__contact-text fs-300">(+233) 50 943 8302</span>
+              </div>
+            </li>
+
+            <!-- Work Hours -->
+            <li class="navbar__contact-item">
+              <span class="navbar__icon">
+                <i class="fa fa-clock navbar__icon-item"></i>
+              </span>
+              <div class="navbar__contact-content">
+                <a href="#" class="navbar__contact-title fs-400 fw-bold">Work Hours</a>
+                <span class="navbar__contact-text fs-300">Mon - Fri 8:00 am - 5:00 pm</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <nav class="navbar__nav">
+        <ul class="navbar__nav-list">
+          <li class="navbar__nav-item">
+            <i class="fa fa-home navbar__nav-icon"></i>
+            <a href="" class="navbar__nav-link fs-400">Home</a>
+          </li>
+          <li class="navbar__nav-item">
+            <i class="fa fa-suitcase navbar__nav-icon"></i>
+            <a href="about.html" class="navbar__nav-link fs-400">About</a>
+          </li>
+          <li class="navbar__nav-item">
+            <i class="fa fa-users navbar__nav-icon"></i>
+            <a href="team.html" class="navbar__nav-link fs-400">Team</a>
+          </li>
+          <li class="navbar__nav-item">
+            <i class="fa fa-folder-open navbar__nav-icon"></i>
+            <a href="services.html" class="navbar__nav-link fs-400">Services</a>
+          </li>
+          <li class="navbar__nav-item">
+            <i class="fa fa-home navbar__nav-icon"></i>
+            <a href="projects.html" class="navbar__nav-link fs-400">Projects</a>
+          </li>
+          <li class="navbar__nav-item">
+            <i class="fa fa-home navbar__nav-icon"></i>
+            <a href="gallery.html" class="navbar__nav-link fs-400">Gallery</a>
+          </li>
+        </ul>
+        <div class="navbar__button">
+          <a href="" class="navbar__button-link openModal fs-400 fw-bold" data-modal="modal-course">Book a Course</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="modal" id="modal-course">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h3 class="modal__form-title ff-secondary fs-700 fw-bold">Book a Course</h3>
+        <form>
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Last Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="text" placeholder="Phone Number" required>
+          <input type="text" placeholder="Organisation" required>
+          <select required>
+            <option value="">Select a Course</option>
+            <optgroup label="ISO Trainings">
+              <option value="iso-45001">ISO 45001 Lead Auditor Training</option>
+            </optgroup>
+            <optgroup label="Safety Trainings">
+              <option value="fire-safety">Basic Fire Safety</option>
+              <option value="first-aid">First Aid Training</option>
+            </optgroup>
+          </select>
+          <textarea placeholder="Specifications" required></textarea>
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <section class="under__construction">
+        <div class="under__construction-content">
+            <h1 class="under__construction-title ff-secondary fs-700 fw-bold">Under Construction</h1>
+            <p class="under__construction-text ff-secondary fs-600">We are currently working on this page. Please check back later.</p>
+        </div>
+    </section>
+  
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__top">
+        <div class="footer__column footer__column--logo">
+          <img src="images/hsemaster.jpg" alt="Company Logo">
+          <img src="images/ISO-9001.png" alt="ISO Certification Logo" class="footer__logo-iso">
+        </div>
+        <div class="footer__column footer__column--company">
+          <h3 class="footer__heading fs-600 ff-secondary">Company</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item"><a href="#training">Training</a></li>
+            <li class="footer__list-item"><a href="#consultancy">Consultancy</a></li>
+            <li class="footer__list-item"><a href="#technology">Technology</a></li>
+            <li class="footer__list-item"><a href="#supply">Supply</a></li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--support">
+          <h3 class="footer__heading ff-secondary">Support</h3>
+          <ul class="footer__list">
+            <li class="footer__list-item">Contact: (+233) 123 456 789</li>
+            <li class="footer__list-item"><a href="#careers">Careers</a></li>
+            <li class="footer__list-item"><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--newsletter">
+          <h3 class="footer__heading ff-secondary">Never Miss Out</h3>
+          <p class="footer__column--text">Sign up to receive the latest HSEQ+ news and trends straight to your inbox
+            from HSE Masters.</p>
+          <form class="footer__form">
+            <input type="email" placeholder="Enter your email" class="footer__form--input" required>
+            <button type="submit" class="footer__form--button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__social-icons">
+          <a href="#linkedin"><i class="fab fa-linkedin"></i></a>
+          <a href="#facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="footer__legal">
+          <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms & Conditions</a>
+        </div>
+        <div class="footer__credits">
+          &copy; HSE Masters 2025. Site by Blake Infinity.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="src/stats.js"></script>
+</body>
+</html>
