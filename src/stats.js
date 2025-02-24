@@ -118,3 +118,19 @@ $(document).ready(function(){
   hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
   });
+
+
+// Example: Add animation to timeline items on scroll
+const timelineItems = document.querySelectorAll('.timeline-item');
+
+const observers = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.5 });
+
+timelineItems.forEach((item) => {
+  observers.observe(item);
+});

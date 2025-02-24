@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="images/png" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Imbue:opsz@10..100&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>HSE-Maters Home Page</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+</head>
+
+<body>
+    <header class="navbar container">
+        <div class="navbar__row">
+          <div class="navbar__upper">
+            <img src="images/hsemaster.jpg" alt="" class="navbar__logo" width="100px">
+            <div class="navbar__hamburger">
+              <i class="fa fa-bars"></i>
+            </div>
+            <div class="navbar__upper-content">
+              <ul role="list" class="navbar__contact-list">
+                <!-- Email Support -->
+                <li class="navbar__contact-item">
+                  <span class="navbar__icon">
+                    <i class="fa fa-envelope navbar__icon-item"></i>
+                  </span>
+                  <div class="navbar__contact-content">
+                    <a href="mailto:info@hsemastersltd.com" class="navbar__contact-title fs-400 fw-bold">Email Support</a>
+                    <span class="navbar__contact-text fs-400">info@hsemastersltd.com</span>
+                  </div>
+                </li>
+    
+                <!-- Call Support -->
+                <li class="navbar__contact-item">
+                  <span class="navbar__icon">
+                    <i class="fa fa-volume-control-phone navbar__icon-item"></i>
+                  </span>
+                  <div class="navbar__contact-content">
+                    <a href="tel:+62-123-6700-411" class="navbar__contact-title fs-400 fw-bold">Call Support</a>
+                    <span class="navbar__contact-text fs-300">(+233) 50 943 8302</span>
+                  </div>
+                </li>
+    
+                <!-- Work Hours -->
+                <li class="navbar__contact-item">
+                  <span class="navbar__icon">
+                    <i class="fa fa-clock navbar__icon-item"></i>
+                  </span>
+                  <div class="navbar__contact-content">
+                    <a href="#" class="navbar__contact-title fs-400 fw-bold">Work Hours</a>
+                    <span class="navbar__contact-text fs-300">Mon - Fri 8:00 am - 5:00 pm</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+    
+          <nav class="navbar__nav">
+            <ul class="navbar__nav-list">
+              <li class="navbar__nav-item">
+                <i class="fa fa-home navbar__nav-icon"></i>
+                <a href="index.html" class="navbar__nav-link fs-400">Home</a
+                </li>
+              <li class="navbar__nav-item">
+                <i class="fa fa-suitcase navbar__nav-icon"></i>
+                <a href="about.html" class="navbar__nav-link fs-400">About</a>
+              </li>
+              <li class="navbar__nav-item">
+                <i class="fa fa-users navbar__nav-icon"></i>
+                <a href="team.html" class="navbar__nav-link fs-400">Team</a>
+              </li>
+              <li class="navbar__nav-item">
+                <i class="fa fa-folder-open navbar__nav-icon"></i>
+                <a href="" class="navbar__nav-link fs-400">Services</a>
+              </li>
+              <li class="navbar__nav-item">
+                <i class="fa fa-home navbar__nav-icon"></i>
+                <a href="" class="navbar__nav-link fs-400">Projects</a>
+              </li>
+              <li class="navbar__nav-item">
+                <i class="fa fa-home navbar__nav-icon"></i>
+                <a href="" class="navbar__nav-link fs-400">Gallery</a>
+              </li>
+            </ul>
+            <div class="navbar__button">
+              <a href="" class="navbar__button-link openModal fs-400 fw-bold" data-modal="modal-course">Book a Course</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <section class="about__section">
+          <div class="about__container container">
+            <div class="about__content">
+              <h1 class="about__heading ff-secondary fs-700 fw-bold">Hi, we're HSE Masters.</h1>
+              <p class="about__text ff-secondary fs-300">
+                We are proud to be your one-stop hub for all things HSE. 
+                Not only do we set the gold standard, but we're also ISO 9001 certified, 
+                which means we don’t just preach safety and excellence—we practice it too. 
+                After all, we believe in leading by example, one meticulously managed process at a time.
+              </p>
+            </div>
+            <div class="about__image">
+              <img src="images/ISO-9001.png" alt="About Us" class="about__img">
+            </div>
+          </div>
+        </section>
+        <section class="journey__container">
+          <div class="journey__content">
+            <!-- Timeline Start -->
+            <div class="timeline-start"></div>
+        
+            <!-- Timeline Items -->
+            <div class="timeline">
+              <!-- Year 2015 -->
+              <div class="timeline-year">
+                <div class="year-label">2015</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-labels left">
+                  <div class="label-big">HSE Masters Timeline</div>
+                  <div class="label-small">Milestone 1 Achieved</div>
+                </div>
+                <div class="timeline-icon"><i class="far fa-clock"></i></div>
+                <div class="timeline-content right">
+                  <div class="title ff-secondary fw-bold fs-500">Company Founded</div>
+                  <div class="description">
+                    <p>Our company was founded in 2000 with a vision to innovate and lead in the HSEQ discipline.</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Year 2018 -->
+              <div class="timeline-year">
+                <div class="year-label">2018</div>
+              </div>
+              <div class="timeline-item reverse">
+                <div class="timeline-labels right">
+                  <div class="label-big">HSE Masters Timeline</div>
+                  <div class="label-small">Milestone 2 Achieved</div>
+                </div>
+                <div class="timeline-icon"><i class="far fa-clock"></i></div>
+                <div class="timeline-content left">
+                  <div class="title">First Major Acquisition</div>
+                  <div class="description">
+                    <p>In 2018, we acquired a key competitor, expanding our market reach and capabilities.</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Year 2020 -->
+              <div class="timeline-year">
+                <div class="year-label">2020</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-labels left">
+                  <div class="label-big">HSE Masters Timeline</div>
+                  <div class="label-small">Milestone 3 Achieved</div>
+                </div>
+                <div class="timeline-icon"><i class="far fa-clock"></i></div>
+                <div class="timeline-content right">
+                  <div class="title">Global Expansion</div>
+                  <div class="description">
+                    <p>In 2020, we expanded our operations globally, opening offices in Europe and Asia.</p>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Year 2023 -->
+              <div class="timeline-year">
+                <div class="year-label">2023</div>
+              </div>
+              <div class="timeline-item reverse">
+                <div class="timeline-labels right">
+                  <div class="label-big">HSE Masters Timeline</div>
+                  <div class="label-small">Milestone 4 Achieved</div>
+                </div>
+                <div class="timeline-icon"><i class="far fa-clock"></i></div>
+                <div class="timeline-content left">
+                  <div class="title">Sustainability Initiatives</div>
+                  <div class="description">
+                    <p>In 2023, we launched major sustainability initiatives to reduce our carbon footprint and promote green energy.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Timeline End -->
+            <div class="timeline-end"></div>
+          </div>
+        </section>
+        <section class="what-we-do ff-secondary">
+          <div class="container">
+            <div class="what-we-do__row">
+              <div class="what-we-do__image">
+                <!-- Replace with your inspiring image -->
+                <img src="images/feat-work-2.jpeg" alt="Inspiring artwork" />
+              </div>
+              <div class="what-we-do__content">
+                <h2 class="what-we-do__heading fs-secondary-heading fw-bold">What We Do</h2>
+                <p class="what-we-do__text ff-secondary fs-300">
+                  As a socially responsible company, we take our environmental and social obligations seriously. We are committed to reducing our environmental footprint and promoting sustainable practices throughout our operations. We also support a range of community initiatives and charities, as we believe that it is our responsibility to give back to the communities that we serve.
+                </p>
+                <p class="what-we-do__text ff-secondary fs-300">
+                  At HSE Masters Ltd, we pride ourselves on our ability to build strong, long-lasting relationships with our clients. We believe that our success is based on our ability to understand our clients' needs and provide them with the solutions and services that they require to achieve their business goals. Our commitment to client satisfaction is reflected in our high client retention rate and our many long-term partnerships.
+                </p>
+                <p class="what-we-do__text ff-secondary fs-300">
+                  We are proud of our reputation as a trusted partner for businesses across the West African region, and we are committed to continuing to provide exceptional service and support to our clients. Contact us today to learn more about how we can help your business achieve its goals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mission-vision ff-secondary">
+          <div class="container">
+            <div class="mission-vision__row">
+              <!-- Mission Column -->
+              <div class="mission">
+                <div class="mission__header">
+                  <div class="mission__icon">⏱️</div>
+                  <h2 class="mission__title ff-secondary fw-bold fs-500">Mission</h2>
+                </div>
+                <p class="mission__text">
+                  To be the global leader in Consultancy business, building on our technologies, competencies and customer interests, and creating value for customers.
+                </p>
+              </div>
+              <!-- Vision Column -->
+              <div class="vision">
+                <div class="vision__header">
+                  <div class="vision__icon">🔍</div>
+                  <h2 class="vision__title ff-secondary fw-bold fs-500">Vision</h2>
+                </div>
+                <p class="vision__text">
+                  Lead the Consultancy business in developing and promoting standards, technologies, and training services to empower organizations in the management of QSHE (Quality – Health-Safety-Environment).
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="values__section ff-secondary">
+          <div class="values__container">
+            <!-- First Row: Title -->
+            <h2 class="values__heading ff-secondary fw-bold fs-800">Values</h2>
+            
+            <!-- Second Row: 4 Columns -->
+            <div class="values__row">
+              <div class="values__col">
+                <h1 class="values__alpha">S</h1>
+                <p class="values__title">Safety First</p>
+                <p class="values__desc">We prioritize safety and well-being of our employees, clients, and the environment.</p>
+              </div>
+              <div class="values__col">
+                <h1 class="values__alpha">E</h1>
+                <p class="values__title">Excellence</p>
+                <p class="values__desc">We strive for excellence in everything we do, from our work to our relationships with our clients.</p>
+              </div>
+              <div class="values__col">
+                <h1 class="values__alpha">I</h1>
+                <p class="values__title">Integrity</p>
+                <p class="values__desc">We uphold the highest standards of honesty, transparency, and ethical behavior in all our dealings.</p>
+              </div>
+              <div class="values__col">
+                <h1 class="values__alpha">Q</h1>
+                <p class="values__title">Quality</p>
+                <p class="values__desc">We prioritize quality in everything we do, from our products to our services.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__top">
+            <div class="footer__column footer__column--logo">
+              <img src="images/hsemaster.jpg" alt="Company Logo">
+              <img src="images/ISO-9001.png" alt="ISO Certification Logo" class="footer__logo-iso">
+            </div>
+            <div class="footer__column footer__column--company">
+              <h3 class="footer__heading fs-600 ff-secondary">Company</h3>
+              <ul class="footer__list">
+                <li class="footer__list-item"><a href="#training">Training</a></li>
+                <li class="footer__list-item"><a href="#consultancy">Consultancy</a></li>
+                <li class="footer__list-item"><a href="#technology">Technology</a></li>
+                <li class="footer__list-item"><a href="#supply">Supply</a></li>
+              </ul>
+            </div>
+            <div class="footer__column footer__column--support">
+              <h3 class="footer__heading ff-secondary">Support</h3>
+              <ul class="footer__list">
+                <li class="footer__list-item">Contact: (+233) 123 456 789</li>
+                <li class="footer__list-item"><a href="#careers">Careers</a></li>
+                <li class="footer__list-item"><a href="#faq">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="footer__column footer__column--newsletter">
+              <h3 class="footer__heading ff-secondary">Never Miss Out</h3>
+              <p class="footer__column--text">Sign up to receive the latest HSEQ+ news and trends straight to your inbox
+                from HSE Masters.</p>
+              <form class="footer__form">
+                <input type="email" placeholder="Enter your email" class="footer__form--input" required>
+                <button type="submit" class="footer__form--button">Subscribe</button>
+              </form>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__social-icons">
+              <a href="#linkedin"><i class="fab fa-linkedin"></i></a>
+              <a href="#facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="footer__legal">
+              <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms & Conditions</a>
+            </div>
+            <div class="footer__credits">
+              &copy; HSE Masters 2025. Site by Blake Infinity.
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="src/stats.js"></script>
+    </body>
+    </html>
