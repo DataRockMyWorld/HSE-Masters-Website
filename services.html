@@ -24,12 +24,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <title>HSE-Maters Home Page</title>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 </head>
 
 <body>
@@ -82,7 +79,7 @@
         <ul class="navbar__nav-list">
           <li class="navbar__nav-item">
             <i class="fa fa-home navbar__nav-icon"></i>
-            <a href="" class="navbar__nav-link fs-400">Home</a>
+            <a href="index.html" class="navbar__nav-link fs-400">Home</a>
           </li>
           <li class="navbar__nav-item">
             <i class="fa fa-suitcase navbar__nav-icon"></i>
@@ -138,13 +135,127 @@
         </form>
       </div>
     </div>
-    <section class="under__construction">
-        <div class="under__construction-content">
-            <h1 class="under__construction-title ff-secondary fs-700 fw-bold">Under Construction</h1>
-            <p class="under__construction-text ff-secondary fs-600">We are currently working on this page. Please check back later.</p>
+    <section class="services__header ff-secondary">
+        <div class="services__header-content">
+            <h1>Our Professional Services</h1>
+            <p>From trainings, consultancy, procurement and HSEEQ app solutions, HSE Masters has refined and perfected an approach to service provision that delivers results.</p>
         </div>
     </section>
-  
+    <section class="services__cards-section ff-secondary">
+      <div class="services__cards-container">
+        <!-- Card 1: Training -->
+        <div class="services__cards-card">
+          <div class="services__cards-content">
+            <div class="services__cards-icon">📚</div>
+            <div class="services__cards-title">Training</div>
+            <div class="services__cards-description">
+              Our HSEQ training programs are designed to help organizations comply with local and international standards and regulations. We offer a wide range of training programs that are tailored to meet the needs of our clients.
+            </div>
+          </div>
+          <a href="#training" class="services__cards-jump">⤵️</a>
+        </div>
+    
+        <!-- Card 2: Consultancy -->
+        <div class="services__cards-card">
+          <div class="services__cards-content">
+            <div class="services__cards-icon">💼</div>
+            <div class="services__cards-title">Consultancy</div>
+            <div class="services__cards-description">
+              We offer ISO certification consultancy services to help organizations implement & maintain management systems. Our team of experts will guide you through the process of achieving ISO certification.
+            </div>
+          </div>
+          <a href="#consultancy" class="services__cards-jump">⤵️</a>
+        </div>
+    
+        <!-- Card 3: Technology -->
+        <div class="services__cards-card">
+          <div class="services__cards-content">
+            <div class="services__cards-icon">💻</div>
+            <div class="services__cards-title">Technology</div>
+            <div class="services__cards-description">
+              We provide HSEQ software solutions that help organizations manage their health, safety, environment, and quality processes. Our software solutions are designed to help organizations improve their HSEQ performance.
+            </div>
+          </div>
+          <a href="#technology" class="services__cards-jump">⤵️</a>
+        </div>
+    
+        <!-- Card 4: Supply -->
+        <div class="services__cards-card">
+          <div class="services__cards-content">
+            <div class="services__cards-icon">📦</div>
+            <div class="services__cards-title">Supply</div>
+            <div class="services__cards-description">
+              We provide a wide range of HSEQ products that help organizations improve their health, safety, environment, and quality performance. Our products are designed to help organizations comply with local and international standards.
+            </div>
+          </div>
+          <a href="#supply" class="services__cards-jump">⤵️</a>
+        </div>
+      </div>
+    </section>
+    <section class="service__training" id="training">
+      <div class="container">
+        <h2 class="training__heading">Training Programs</h2>
+        <!-- Tab Buttons -->
+        <div class="training__tabs">
+          <button class="training__tab" data-target="first-aid">First Aid</button>
+          <button class="training__tab" data-target="fire-fighting">Fire Fighting</button>
+          <button class="training__tab" data-target="rescue">Rescue</button>
+          <button class="training__tab" data-target="other">Other Trainings</button>
+        </div>
+        <!-- Tab Content -->
+        <div class="training__content">
+          <!-- First Aid Category -->
+          <div class="training__category" id="first-aid">
+            <div class="training__course-card">
+              <div class="training__course-icon">⛑️</div>
+              <div class="training__course-title">Basic First Aid</div>
+              <div class="training__course-description">
+                Learn essential first aid techniques, CPR, and emergency response fundamentals.
+              </div>
+            </div>
+          </div>
+          <!-- Fire Fighting Category -->
+          <div class="training__category" id="fire-fighting">
+            <div class="training__course-card">
+              <div class="training__course-icon">🔥</div>
+              <div class="training__course-title">Basic Fire Fighting</div>
+              <div class="training__course-description">
+                An introduction to fire safety and fundamental firefighting techniques.
+              </div>
+            </div>
+          </div>
+          <!-- Rescue Category -->
+          <div class="training__category" id="rescue">
+            <div class="training__course-card">
+              <div class="training__course-icon">🪜</div>
+              <div class="training__course-title">Working at Height & Rescue</div>
+              <div class="training__course-description">
+                Techniques and safety procedures for working in high-risk environments.
+              </div>
+            </div>
+          </div>
+          <!-- Other Trainings Category -->
+          <div class="training__category" id="other">
+            <div class="training__course-card">
+              <div class="training__course-icon">📦</div>
+              <div class="training__course-title">Manual Handling</div>
+              <div class="training__course-description">
+                Proper techniques for lifting, carrying, and moving loads safely.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="service__consultancy" id="consultancy">
+      <h1>Hello conSULTANC</h1>
+    </section>
+    <section class="service__technology" id="technology">
+      <h1>Hello Service</h1>
+    </section>
+    <section class="service__supply" id="supply">
+      <h1>Hello World</h1>
+    </section>
   </main>
   <footer class="footer">
     <div class="footer__container">
@@ -196,4 +307,6 @@
   </footer>
   <script src="src/stats.js"></script>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </html>
