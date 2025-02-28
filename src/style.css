@@ -1105,6 +1105,30 @@ button .footer__form--button {
   .carousel {
     margin: 0 auto;
   }
+
+  .service__consultancy {
+    width: 100%;
+    text-align: center;
+    border: 2px solid red;
+    padding: 0 10px;
+  }
+  .consultancy__timelines {
+    display: block;
+    width: 100%;
+  }
+
+  .service__technology {
+    width: 100%;
+    text-align: center;
+  }
+  .technology__info {
+    display: flex;
+    width: 100%;
+  }
+  .technology__card {
+    display: block;
+    width: 100%;
+  }
 }
 
 
@@ -1333,6 +1357,10 @@ button .footer__form--button {
 
   .services__column--right {
     width: 100%;
+  }
+  .services__header-title {
+    font-size: var(--fs-800);
+    
   }
 
   .stat {
@@ -1897,4 +1925,300 @@ button .footer__form--button {
   font-size: 1rem;
   line-height: 1.5;
   color: #555;
+}
+
+
+/* Consultancy Section */
+.service__consultancy {
+  padding: 30px 0px;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Part 1: Scope of Work */
+.consultancy__scope {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.consultancy__heading {
+  font-size: var(--fs-800);
+  color: var(--clr-primary-400);
+  margin-bottom: 10px;
+  text-align: left;
+}
+.consultancy__subtext {
+  font-size: var(--fs-500);
+  color: #555;
+  text-align: left;
+}
+
+/* Horizontal Timeline */
+.consultancy__timelines.horizontal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0;
+}
+
+/* Timeline Items */
+.timelines-item {
+  background:  #f7f7f7;
+  border-radius: 8px;
+  flex: 1;
+  margin: 0 10px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.timelines-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 95%;
+  position: relative;
+  border-radius: 5px;
+}
+
+.timelines-content-1 {
+  background-color: #275295;
+  color: white;
+}
+
+.timelines-content-2 {
+  background-color: #41924D;
+}
+
+.timelines-content-3 {
+  background-color: #DAC043;
+}
+
+.timelines-content-4 {
+  background-color: #CD3F27;
+}
+
+.timelines-content-5 {
+  background: #807ACA;
+}
+
+.timelines-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: white;
+  color: var(--clr-neutral-900);
+  width: 60px;
+  height: 60px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 auto 5px auto;
+}
+
+.timelines-icon {
+  font-size: 1.8rem;
+  color: var(--clr-primary-400);
+  margin-top: 0;
+  margin-left: 50px;
+  position: absolute;
+  top: 25px;
+  left: 35px;
+  border: none;
+}
+
+.timelines-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 5px;
+  color: white;
+}
+
+.timelines-description {
+  font-size: 1rem;
+  color: white;
+  width: 150px;
+  margin: 0 auto;
+  text-align:left;
+}
+
+/* Arrow Icons */
+.timelines-arrow {
+  font-size: 1.5rem;
+  color: var(--clr-primary-400);
+}
+
+/* Hide arrows if timeline items are evenly spaced (only show between items if needed) */
+.consultancy__timelines.horizontal .timelines-arrow {
+  display: block;
+}
+
+/* Alternatively, you can include arrows inline if you prefer */
+/* Uncomment below if you want arrows not as separate flex items
+.timeline-arrow {
+  margin: 0 10px;
+}
+*/
+
+/* Part 2: ISO Standards Section */
+.consultancy__iso {
+  margin-top: 60px;
+  text-align: center;
+  background-image: var("/images/standard.jpg");
+}
+.consultancy__iso-heading {
+  font-size: 2rem;
+  color: var(--clr-primary-400);
+  margin-bottom: 10px;
+  text-align: left;
+}
+.consultancy__iso-subtext {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.consultancy__iso-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.consultancy__iso-item {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  width: calc(25% - 20px);
+  text-align: left;
+}
+.consultancy__iso-item i {
+  font-size: 1.5rem;
+  color: var(--clr-accent-400);
+  margin-bottom: 10px;
+  display: block;
+}
+.consultancy__iso-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+.consultancy__iso-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .consultancy__iso-item {
+    width: calc(50% - 20px);
+  }
+  .consultancy__timelines.horizontal {
+    flex-wrap: wrap;
+  }
+  .timelines-item {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 480px) {
+  .consultancy__iso-item {
+    width: 100%;
+  }
+}
+
+
+/* Technology Section */
+/* Technology Section */
+.service__technology {
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.technology__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Left Column: Title and Description */
+.technology__info {
+  flex: 1;
+  max-width: 50%;
+}
+
+.technology__heading {
+  font-size: 2rem;
+  color: var(--clr-primary-400);
+  margin-bottom: 20px;
+}
+
+.technology__description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Right Column: Cards Grid */
+.technology__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  flex: 1;
+  max-width: 50%;
+}
+
+/* Cards */
+.technology__card {
+  background: linear-gradient(135deg, #000, #bfa02d);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.technology__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover Effect: Show Description */
+.technology__card:hover .card-title {
+  opacity: 0;
+}
+
+.technology__card::after {
+  content: attr(data-description);
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 10px;
+}
+
+.technology__card:hover::after {
+  opacity: 1;
 }
