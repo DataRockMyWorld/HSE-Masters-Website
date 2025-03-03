@@ -1129,6 +1129,17 @@ button .footer__form--button {
     display: block;
     width: 100%;
   }
+  .technology__heading {
+    font-size: 1.5rem;
+  }
+
+  .technology__description {
+    font-size: 0.9rem;
+  }
+
+  .technology__card {
+    padding: 10px;
+  }
 }
 
 
@@ -1284,6 +1295,26 @@ button .footer__form--button {
   .vision {
     flex: 1 1 100%;
     margin-bottom: 20px;
+  }
+  .technology__content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Left Column: Title and Description */
+  .technology__info {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  /* Right Column: Cards Grid */
+  .technology__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+    padding: 0 10px;
   }
 
 }
