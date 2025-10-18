@@ -1,3 +1,13 @@
+// Page Loader
+window.addEventListener('load', function() {
+  const loader = document.getElementById('pageLoader');
+  if (loader) {
+    setTimeout(function() {
+      loader.classList.add('hidden');
+    }, 500);
+  }
+});
+
 // Number Animation
 function animateNumbers() {
     const counters = document.querySelectorAll('.number');
@@ -188,4 +198,128 @@ function animateNumbers() {
     });
     // Activate the first tab if available
     setActiveTab(tabs[0]);
+  });
+
+  // Scroll to Top Button
+  document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    if (scrollToTopBtn) {
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.add('show');
+        } else {
+          scrollToTopBtn.classList.remove('show');
+        }
+      });
+
+      scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  });
+
+  // Smooth Scroll for Anchor Links
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href !== '') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+  });
+
+  // Sticky Navbar on Scroll
+  document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('.navbar');
+    
+    if (navbar) {
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 100) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    }
+  });
+
+  // Scroll Animations for Elements
+  document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe service cards
+    const serviceCards = document.querySelectorAll('.services__card');
+    serviceCards.forEach((card, index) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+      observer.observe(card);
+    });
+  });
+
+  // Project Filter Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter__btn');
+    const projectCards = document.querySelectorAll('.project__card');
+
+    if (filterButtons.length === 0) return;
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filterValue = this.getAttribute('data-filter');
+
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        // Filter projects with smooth animation
+        projectCards.forEach((card, index) => {
+          const category = card.getAttribute('data-category');
+          
+          if (filterValue === 'all' || category === filterValue) {
+            card.style.display = 'block';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            }, index * 50);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // Initialize project cards with animation
+    projectCards.forEach(card => {
+      card.style.transition = 'all 0.4s ease';
+    });
   });

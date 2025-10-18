@@ -141,54 +141,48 @@
             <p>From trainings, consultancy, procurement and HSEEQ app solutions, HSE Masters has refined and perfected an approach to service provision that delivers results.</p>
         </div>
     </section>
-    <section class="services__cards-section ff-secondary">
-      <div class="services__cards-container">
-        <!-- Card 1: Training -->
-        <div class="services__cards-card">
-          <div class="services__cards-content">
-            <div class="services__cards-icon">📚</div>
-            <div class="services__cards-title">Training</div>
-            <div class="services__cards-description">
-              Our HSEQ training programs are designed to help organizations comply with local and international standards and regulations. We offer a wide range of training programs that are tailored to meet the needs of our clients.
+    <section class="services__overview ff-secondary">
+      <div class="container">
+        <div class="services__grid">
+          <!-- Service 1: Training -->
+          <a href="#training" class="service__tile">
+            <div class="service__tile-icon">📚</div>
+            <h3 class="service__tile-title">Training</h3>
+            <p class="service__tile-desc">Professional HSEQ training programs</p>
+            <div class="service__tile-arrow">
+              <i class="fas fa-arrow-down"></i>
             </div>
-          </div>
-          <a href="#training" class="services__cards-jump">⤵️</a>
-        </div>
-    
-        <!-- Card 2: Consultancy -->
-        <div class="services__cards-card">
-          <div class="services__cards-content">
-            <div class="services__cards-icon">💼</div>
-            <div class="services__cards-title">Consultancy</div>
-            <div class="services__cards-description">
-              We offer ISO certification consultancy services to help organizations implement & maintain management systems. Our team of experts will guide you through the process of achieving ISO certification.
+          </a>
+
+          <!-- Service 2: Consultancy -->
+          <a href="#consultancy" class="service__tile">
+            <div class="service__tile-icon">💼</div>
+            <h3 class="service__tile-title">Consultancy</h3>
+            <p class="service__tile-desc">ISO certification & compliance guidance</p>
+            <div class="service__tile-arrow">
+              <i class="fas fa-arrow-down"></i>
             </div>
-          </div>
-          <a href="#consultancy" class="services__cards-jump">⤵️</a>
-        </div>
-    
-        <!-- Card 3: Technology -->
-        <div class="services__cards-card">
-          <div class="services__cards-content">
-            <div class="services__cards-icon">💻</div>
-            <div class="services__cards-title">Technology</div>
-            <div class="services__cards-description">
-              We provide HSEQ software solutions that help organizations manage their health, safety, environment, and quality processes. Our software solutions are designed to help organizations improve their HSEQ performance.
+          </a>
+
+          <!-- Service 3: Technology -->
+          <a href="#technology" class="service__tile">
+            <div class="service__tile-icon">💻</div>
+            <h3 class="service__tile-title">Technology</h3>
+            <p class="service__tile-desc">Comprehensive HSSE management software</p>
+            <div class="service__tile-arrow">
+              <i class="fas fa-arrow-down"></i>
             </div>
-          </div>
-          <a href="#technology" class="services__cards-jump">⤵️</a>
-        </div>
-    
-        <!-- Card 4: Supply -->
-        <div class="services__cards-card">
-          <div class="services__cards-content">
-            <div class="services__cards-icon">📦</div>
-            <div class="services__cards-title">Supply</div>
-            <div class="services__cards-description">
-              We provide a wide range of HSEQ products that help organizations improve their health, safety, environment, and quality performance. Our products are designed to help organizations comply with local and international standards.
+          </a>
+
+          <!-- Service 4: Supply -->
+          <a href="#supply" class="service__tile">
+            <div class="service__tile-icon">📦</div>
+            <h3 class="service__tile-title">Supply</h3>
+            <p class="service__tile-desc">Quality safety equipment & PPE</p>
+            <div class="service__tile-arrow">
+              <i class="fas fa-arrow-down"></i>
             </div>
-          </div>
-          <a href="#supply" class="services__cards-jump">⤵️</a>
+          </a>
         </div>
       </div>
     </section>
@@ -197,10 +191,10 @@
         <h2 class="training__heading">Training Programs</h2>
         <!-- Tab Buttons -->
         <div class="training__tabs">
-          <button class="training__tab" data-target="first-aid">First Aid</button>
-          <button class="training__tab" data-target="fire-fighting">Fire Fighting</button>
-          <button class="training__tab" data-target="rescue">Rescue</button>
-          <button class="training__tab" data-target="other">Other Trainings</button>
+          <button class="training__tab" data-target="first-aid"><span>First Aid</span></button>
+          <button class="training__tab" data-target="fire-fighting"><span>Fire Fighting</span></button>
+          <button class="training__tab" data-target="rescue"><span>Rescue</span></button>
+          <button class="training__tab" data-target="other"><span>Other Trainings</span></button>
         </div>
         <!-- Tab Content -->
         <div class="training__content">
@@ -250,91 +244,75 @@
     <!-- Consultancy Section -->
     <section class="service__consultancy ff-secondary" id="consultancy">
       <div class="container">
-        <!-- Part 1: Scope of Work & Horizontal timelines -->
+        <!-- Part 1: Scope of Work -->
         <div class="consultancy__scope">
-          <h2 class="consultancy__heading">Scope of Work</h2>
-          <p class="consultancy__subtext">And we are with you every step of the journey...</p>
+          <h2 class="consultancy__heading">ISO Certification Journey</h2>
+          <p class="consultancy__subtext">We guide you through every step to achieve and maintain ISO certification excellence</p>
         </div>
     
-        <!-- Horizontal timelines -->
-        <div class="consultancy__timelines horizontal">
-          <!-- timelines Item 1: Gap Analysis -->
-          <div class="timelines-item">
-            <div class="timelines-content timelines-content-1">
-              <span class="timelines-number">1</span>
-              <i class="fas fa-search timelines-icon"></i>
-              <h3 class="timelines-title">Gap Analysis</h3>
-              <p class="timelines-description">
-                Identify areas of non-compliance and opportunities for improvement.
-              </p>
+        <!-- Modern Process Flow -->
+        <div class="consultancy__process">
+          <!-- Step 1 -->
+          <div class="process__step">
+            <div class="process__number">01</div>
+            <div class="process__content">
+              <div class="process__icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <h3 class="process__title">Gap Analysis</h3>
+              <p class="process__desc">Comprehensive assessment of your current systems against ISO requirements</p>
             </div>
+            <div class="process__connector"></div>
           </div>
-    
-          <!-- Arrow -->
-          <div class="timelines-arrow">
-            <i class="fas fa-arrow-right"></i>
-          </div>
-    
-          <!-- timelines Item 2: System Development -->
-          <div class="timelines-item">
-            <div class="timelines-content timelines-content-2">
-              <span class="timelines-number">2</span>
-              <i class="fas fa-code timelines-icon"></i>
-              <h3 class="timelines-title">System Development</h3>
-              <p class="timelines-description">
-                Develop tailored systems to meet your organizational needs.
-              </p>
+
+          <!-- Step 2 -->
+          <div class="process__step">
+            <div class="process__number">02</div>
+            <div class="process__content">
+              <div class="process__icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3 class="process__title">System Development</h3>
+              <p class="process__desc">Design and develop customized management systems for your organization</p>
             </div>
+            <div class="process__connector"></div>
           </div>
-    
-          <!-- Arrow -->
-          <div class="timelines-arrow">
-            <i class="fas fa-arrow-right"></i>
-          </div>
-    
-          <!-- timelines Item 3: Implementation -->
-          <div class="timelines-item">
-            <div class="timelines-content timelines-content-3">
-              <span class="timelines-number">3</span>
-              <i class="fas fa-play-circle timelines-icon"></i>
-              <h3 class="timelines-title">Implementation</h3>
-              <p class="timelines-description">
-                Deploy and integrate systems into your operations.
-              </p>
+
+          <!-- Step 3 -->
+          <div class="process__step">
+            <div class="process__number">03</div>
+            <div class="process__content">
+              <div class="process__icon">
+                <i class="fas fa-play-circle"></i>
+              </div>
+              <h3 class="process__title">Implementation</h3>
+              <p class="process__desc">Seamless integration and deployment of systems across your operations</p>
             </div>
+            <div class="process__connector"></div>
           </div>
-    
-          <!-- Arrow -->
-          <div class="timelines-arrow">
-            <i class="fas fa-arrow-right"></i>
-          </div>
-    
-          <!-- timelines Item 4: Internal Audit -->
-          <div class="timelines-item">
-            <div class="timelines-content timelines-content-4">
-              <span class="timelines-number">4</span>
-              <i class="fas fa-clipboard-check timelines-icon"></i>
-              <h3 class="timelines-title">Internal Audit</h3>
-              <p class="timelines-description">
-                Conduct internal audits to ensure ongoing compliance.
-              </p>
+
+          <!-- Step 4 -->
+          <div class="process__step">
+            <div class="process__number">04</div>
+            <div class="process__content">
+              <div class="process__icon">
+                <i class="fas fa-clipboard-check"></i>
+              </div>
+              <h3 class="process__title">Internal Audit</h3>
+              <p class="process__desc">Thorough internal audits to ensure compliance and readiness</p>
             </div>
+            <div class="process__connector"></div>
           </div>
-    
-          <!-- Arrow -->
-          <div class="timelines-arrow">
-            <i class="fas fa-arrow-right"></i>
-          </div>
-    
-          <!-- timelines Item 5: External Audit -->
-          <div class="timelines-item">
-            <div class="timelines-content timelines-content-5">
-              <span class="timelines-number">5</span>
-              <i class="fas fa-user-check timelines-icon"></i>
-              <h3 class="timelines-title">External Audit</h3>
-              <p class="timelines-description">
-                Prepare for and support external audits with expert guidance.
-              </p>
+
+          <!-- Step 5 -->
+          <div class="process__step">
+            <div class="process__number">05</div>
+            <div class="process__content">
+              <div class="process__icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <h3 class="process__title">Certification</h3>
+              <p class="process__desc">Expert support through external audits to achieve certification</p>
             </div>
           </div>
         </div>
@@ -382,57 +360,154 @@
     <!-- Technology Section -->
     <section class="service__technology ff-secondary" id="technology">
       <div class="container">
-        <div class="technology__content">
-          <!-- Left Column: Title and Description -->
-          <div class="technology__info">
-            <h2 class="technology__heading">Technology Solutions on Offer</h2>
+        <div class="technology__showcase">
+          <!-- Header -->
+          <div class="technology__header">
+            <h2 class="technology__heading">Comprehensive HSSE Management Software</h2>
             <p class="technology__description">
-              We provide innovative technology solutions tailored to enhance safety,
-              compliance, and operational efficiency. Our custom-built applications
-              are designed to streamline processes and ensure effective management
-              across all levels.
+              Our all-in-one HSSE system provides end-to-end management of Health, Safety, Security, 
+              Environment, and Quality processes. From incident reporting to compliance tracking, 
+              manage everything from a single, powerful platform.
             </p>
           </div>
-    
-          <!-- Right Column: Cards Grid -->
-          <div class="technology__cards">
-            <!-- Card 1: HSE Management App -->
-            <div class="technology__card" data-description="Digitize and streamline HSE processes for compliance and safety.">
-              <span class="card-title">HSE Management App</span>
+
+          <!-- Dashboard Preview -->
+          <div class="technology__dashboard">
+            <div class="dashboard__mockup">
+              <!-- TO ADD DASHBOARD IMAGE: Replace dashboard__placeholder div with:
+                   <img src="images/your-dashboard.jpg" alt="HSSE Dashboard" style="width: 100%; border-radius: 10px; margin-top: 40px;">
+              -->
+              <div class="dashboard__placeholder">
+                <i class="fas fa-chart-line dashboard__icon"></i>
+                <p class="dashboard__text">Dashboard Preview Coming Soon</p>
+                <div class="dashboard__features">
+                  <div class="dashboard__feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Real-time Analytics</span>
+                  </div>
+                  <div class="dashboard__feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Incident Reporting</span>
+                  </div>
+                  <div class="dashboard__feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Compliance Tracking</span>
+                  </div>
+                  <div class="dashboard__feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Audit Management</span>
+                  </div>
+                  <div class="dashboard__feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Performance Monitoring</span>
+                  </div>
+                  <div class="dashboard__feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>PPE Management</span>
+                  </div>
+                </div>
+              </div>
             </div>
-    
-            <!-- Card 2: HSEQ Audit App -->
-            <div class="technology__card" data-description="Facilitate audits and ensure HSEQ standards are met.">
-              <span class="card-title">HSEQ Audit App</span>
-            </div>
-    
-            <!-- Card 3: PPE Management Webapp -->
-            <div class="technology__card" data-description="Manage and track PPE inventory for safety compliance.">
-              <span class="card-title">PPE Management Webapp</span>
-            </div>
-    
-            <!-- Card 4: HSE Reporting App -->
-            <div class="technology__card" data-description="Real-time reporting for incidents, near-misses, and safety observations.">
-              <span class="card-title">HSE Reporting App</span>
-            </div>
-    
-            <!-- Card 5: HSEQ Management System Software -->
-            <div class="technology__card" data-description="Comprehensive HSEQ management for operational excellence.">
-              <span class="card-title">HSEQ Management System Software</span>
-            </div>
-    
-            <!-- Card 6: HSEQ Performance Monitoring App -->
-            <div class="technology__card" data-description="Track KPIs and monitor HSEQ performance effectively.">
-              <span class="card-title">HSEQ Performance Monitoring App</span>
-            </div>
+          </div>
+
+          <!-- Call to Action -->
+          <div class="technology__cta">
+            <h3 class="technology__cta-title">Ready to transform your HSSE management?</h3>
+            <a href="#" class="technology__cta-button openModal" data-modal="modal-quote">Request a Demo</a>
           </div>
         </div>
       </div>
     </section>
     
     <!-- Supply Section -->
-    <section class="service__supply" id="supply">
-      <h1>Hello World</h1>
+    <section class="service__supply ff-secondary" id="supply">
+      <div class="container">
+        <div class="supply__header">
+          <h2 class="supply__heading">Safety Equipment & PPE Supply</h2>
+          <p class="supply__subtext">
+            We provide high-quality personal protective equipment and safety gear to ensure workplace safety and compliance.
+          </p>
+        </div>
+        
+        <div class="supply__grid">
+          <!-- PPE Category 1 -->
+          <div class="supply__item">
+            <div class="supply__icon">🦺</div>
+            <h3 class="supply__item-title">Personal Protective Equipment</h3>
+            <ul class="supply__list">
+              <li>Safety Helmets & Hard Hats</li>
+              <li>Safety Boots & Shoes</li>
+              <li>High Visibility Vests</li>
+              <li>Safety Gloves</li>
+            </ul>
+          </div>
+
+          <!-- PPE Category 2 -->
+          <div class="supply__item">
+            <div class="supply__icon">😷</div>
+            <h3 class="supply__item-title">Respiratory Protection</h3>
+            <ul class="supply__list">
+              <li>Face Masks & Respirators</li>
+              <li>Gas Masks</li>
+              <li>Dust Masks</li>
+              <li>Air Filters</li>
+            </ul>
+          </div>
+
+          <!-- PPE Category 3 -->
+          <div class="supply__item">
+            <div class="supply__icon">🥽</div>
+            <h3 class="supply__item-title">Eye & Face Protection</h3>
+            <ul class="supply__list">
+              <li>Safety Goggles</li>
+              <li>Face Shields</li>
+              <li>Welding Helmets</li>
+              <li>Protective Eyewear</li>
+            </ul>
+          </div>
+
+          <!-- PPE Category 4 -->
+          <div class="supply__item">
+            <div class="supply__icon">🔥</div>
+            <h3 class="supply__item-title">Fire Safety Equipment</h3>
+            <ul class="supply__list">
+              <li>Fire Extinguishers</li>
+              <li>Fire Blankets</li>
+              <li>Smoke Detectors</li>
+              <li>Emergency Lighting</li>
+            </ul>
+          </div>
+
+          <!-- PPE Category 5 -->
+          <div class="supply__item">
+            <div class="supply__icon">⚠️</div>
+            <h3 class="supply__item-title">Safety Signage</h3>
+            <ul class="supply__list">
+              <li>Warning Signs</li>
+              <li>Mandatory Signs</li>
+              <li>Emergency Exit Signs</li>
+              <li>Safety Posters</li>
+            </ul>
+          </div>
+
+          <!-- PPE Category 6 -->
+          <div class="supply__item">
+            <div class="supply__icon">🩹</div>
+            <h3 class="supply__item-title">First Aid Supplies</h3>
+            <ul class="supply__list">
+              <li>First Aid Kits</li>
+              <li>Medical Supplies</li>
+              <li>Emergency Equipment</li>
+              <li>Safety Stations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="supply__cta">
+          <p class="supply__cta-text">Need custom safety solutions? We've got you covered!</p>
+          <a href="#" class="supply__cta-button openModal" data-modal="modal-quote">Request a Quote</a>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="footer">
