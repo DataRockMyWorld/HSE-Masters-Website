@@ -5487,6 +5487,100 @@ html {
 }
 
 /* ===================================================
+   MISSION & VISION — Split Image Panels (About Page)
+   =================================================== */
+
+.mv {
+  background: #0e0e1a;
+}
+
+.mv__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 440px;
+}
+
+.mv__panel {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 48px;
+}
+
+.mv__panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.7s ease;
+  z-index: 0;
+}
+
+.mv__panel:hover::before {
+  transform: scale(1.05);
+}
+
+.mv__panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 26, 0.82);
+  z-index: 1;
+}
+
+.mv__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+}
+
+.mv__eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clr-accent-400);
+  font-family: var(--ff-secondary);
+  margin-bottom: 16px;
+}
+
+.mv__heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 28px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.mv__heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--clr-accent-400);
+}
+
+.mv__text {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.78;
+}
+
+@media (max-width: 768px) {
+  .mv__grid {
+    grid-template-columns: 1fr;
+  }
+  .mv__panel {
+    padding: 48px 24px;
+  }
+}
+
+/* ===================================================
    JOURNEY — Editorial List (About Page)
    =================================================== */
 
