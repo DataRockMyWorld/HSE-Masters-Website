@@ -5159,3 +5159,562 @@ html {
     font-size: 1rem;
   }
 }
+
+/* ===================================================
+   WHAT WE DO — Bento Grid (Home Page)
+   =================================================== */
+
+.wwd {
+  background: #0e0e1a;
+  padding: 80px 0;
+}
+
+.wwd__header {
+  max-width: 1200px;
+  margin: 0 auto 48px;
+  padding: 0 24px;
+}
+
+.wwd__eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clr-accent-400);
+  font-family: var(--ff-secondary);
+  margin-bottom: 12px;
+}
+
+.wwd__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--ff-secondary);
+  line-height: 1.1;
+}
+
+.wwd__grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 280px 280px;
+  gap: 6px;
+}
+
+.wwd__panel {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: #1a1a2e;
+}
+
+.wwd__panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.7s ease;
+  z-index: 0;
+}
+
+.wwd__panel:hover::before {
+  transform: scale(1.08);
+}
+
+.wwd__panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.3) 55%, rgba(0,0,0,0.08) 100%);
+  z-index: 1;
+}
+
+.wwd__panel--tall {
+  grid-row: span 2;
+}
+
+.wwd__panel--wide {
+  grid-column: span 2;
+}
+
+.wwd__panel-inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px;
+  z-index: 2;
+}
+
+.wwd__tag {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-accent-400);
+  font-family: var(--ff-secondary);
+  margin-bottom: 8px;
+}
+
+.wwd__panel-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--ff-secondary);
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.wwd__panel-desc {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.72);
+  font-family: var(--ff-secondary);
+  line-height: 1.65;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, margin-top 0.4s ease;
+  margin-top: 0;
+}
+
+.wwd__panel:hover .wwd__panel-desc {
+  max-height: 100px;
+  margin-top: 10px;
+}
+
+.wwd__bar {
+  width: 0;
+  height: 2px;
+  background: var(--clr-accent-400);
+  margin-top: 12px;
+  transition: width 0.4s ease;
+}
+
+.wwd__panel:hover .wwd__bar {
+  width: 36px;
+}
+
+@media (max-width: 768px) {
+  .wwd__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 16px;
+  }
+  .wwd__panel {
+    height: 240px;
+  }
+  .wwd__panel--tall,
+  .wwd__panel--wide {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+}
+
+/* ===================================================
+   FEATURED WORKS — Sandwich Grid (Home Page)
+   =================================================== */
+
+.fw {
+  background: #0e0e1a;
+  padding: 80px 0;
+}
+
+.fw__header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 24px;
+}
+
+.fw__title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+}
+
+.fw__title span {
+  color: var(--clr-accent-400);
+}
+
+.fw__grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 360px 200px;
+  gap: 6px;
+}
+
+.fw__panel {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.fw__panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.7s ease;
+  z-index: 0;
+}
+
+.fw__panel:hover::before {
+  transform: scale(1.08);
+}
+
+.fw__panel--strip {
+  grid-column: span 2;
+}
+
+.fw__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 24px;
+  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, transparent 100%);
+  z-index: 1;
+}
+
+.fw__panel--strip .fw__overlay {
+  top: 0;
+  right: auto;
+  bottom: 0;
+  width: 280px;
+  padding: 0 28px;
+  background: linear-gradient(to right, rgba(0,0,0,0.88) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fw__cat {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-accent-400);
+  font-family: var(--ff-secondary);
+  margin-bottom: 6px;
+}
+
+.fw__name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--ff-secondary);
+  line-height: 1.2;
+}
+
+.fw__sub {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.62);
+  font-family: var(--ff-secondary);
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .fw__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 16px;
+  }
+  .fw__panel {
+    height: 220px;
+  }
+  .fw__panel--strip {
+    grid-column: span 1;
+  }
+  .fw__panel--strip .fw__overlay {
+    width: 180px;
+  }
+}
+
+/* ===================================================
+   BACKGROUND CONSISTENCY — Home Page
+   =================================================== */
+
+.clients-carousel {
+  background: #0e0e1a !important;
+  background-image: none !important;
+}
+
+.clients-carousel h3 {
+  color: #fff !important;
+}
+
+.clients-carousel h3::after {
+  background: linear-gradient(90deg, var(--clr-accent-400), #ffa500) !important;
+}
+
+.quote__section {
+  background: #1a1a2e !important;
+}
+
+.quote__section-text {
+  color: #fff !important;
+}
+
+.quote__button-link {
+  background-color: var(--clr-accent-400) !important;
+  color: #000 !important;
+  box-shadow: 0 8px 25px rgba(255, 216, 8, 0.25) !important;
+}
+
+/* ===================================================
+   MISSION & VISION — Reduce Height
+   =================================================== */
+
+.mission-vision {
+  padding: 52px 20px !important;
+}
+
+.mission,
+.vision {
+  padding: 28px 28px !important;
+}
+
+.mission__title,
+.vision__title {
+  font-size: 1.25rem !important;
+}
+
+/* ===================================================
+   JOURNEY — Editorial List (About Page)
+   =================================================== */
+
+.journey {
+  background: #0e0e1a;
+  padding: 80px 0;
+}
+
+.journey__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.journey__title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 56px;
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.journey__title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 48px;
+  height: 3px;
+  background: var(--clr-accent-400);
+}
+
+.journey__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 2px solid rgba(255,216,8,0.25);
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.journey__item {
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+
+.journey__item::before {
+  content: '';
+  position: absolute;
+  left: -39px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--clr-accent-400);
+  border: 2px solid #0e0e1a;
+  box-shadow: 0 0 0 3px rgba(255,216,8,0.3);
+}
+
+.journey__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 64px;
+}
+
+.journey__year {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--clr-accent-400);
+  font-family: var(--ff-secondary);
+  font-weight: 700;
+}
+
+.journey__icon {
+  color: rgba(255,255,255,0.35);
+  font-size: 1.1rem;
+}
+
+.journey__body {
+  flex: 1;
+}
+
+.journey__tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0e0e1a;
+  background: var(--clr-accent-400);
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-family: var(--ff-secondary);
+  margin-bottom: 10px;
+}
+
+.journey__name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--ff-secondary);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.journey__desc {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  font-family: var(--ff-secondary);
+  line-height: 1.7;
+}
+
+/* ===================================================
+   ABOUT VALUES — 2×2 Bento (About Page)
+   =================================================== */
+
+.about-values {
+  background: #0e0e1a;
+  padding: 80px 0;
+}
+
+.av__header {
+  max-width: 1200px;
+  margin: 0 auto 48px;
+  padding: 0 24px;
+}
+
+.av__title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #fff;
+}
+
+.av__grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 320px 320px;
+  gap: 6px;
+}
+
+.av__panel {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.av__panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.7s ease;
+  z-index: 0;
+}
+
+.av__panel:hover::before {
+  transform: scale(1.06);
+}
+
+.av__panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.1) 100%);
+  z-index: 1;
+}
+
+.av__inner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px;
+  z-index: 2;
+}
+
+.av__letter {
+  display: block;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--clr-accent-400);
+  font-family: var(--ff-secondary);
+  line-height: 1;
+  margin-bottom: 8px;
+  opacity: 0.85;
+}
+
+.av__name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: var(--ff-secondary);
+  margin-bottom: 0;
+}
+
+.av__desc {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.7);
+  font-family: var(--ff-secondary);
+  line-height: 1.65;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, margin-top 0.4s ease;
+  margin-top: 0;
+}
+
+.av__panel:hover .av__desc {
+  max-height: 100px;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .av__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0 16px;
+  }
+  .av__panel {
+    height: 280px;
+  }
+}
