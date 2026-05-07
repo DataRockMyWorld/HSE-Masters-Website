@@ -33,81 +33,25 @@
 </head>
 
 <body>
-  <header class="navbar container">
-    <div class="navbar__row">
-      <div class="navbar__upper">
-        <img src="images/hsemaster.jpg" alt="" class="navbar__logo" width="100px">
-        <div class="navbar__hamburger">
-          <i class="fa fa-bars"></i>
-        </div>
-        <div class="navbar__upper-content">
-          <ul role="list" class="navbar__contact-list">
-            <!-- Email Support -->
-            <li class="navbar__contact-item">
-              <span class="navbar__icon">
-                <i class="fa fa-envelope navbar__icon-item"></i>
-              </span>
-              <div class="navbar__contact-content">
-                <a href="mailto:info@hsemastersltd.com" class="navbar__contact-title fs-400 fw-bold">Email Support</a>
-                <span class="navbar__contact-text fs-400">info@hsemastersltd.com</span>
-              </div>
-            </li>
-
-            <!-- Call Support -->
-            <li class="navbar__contact-item">
-              <span class="navbar__icon">
-                <i class="fa fa-volume-control-phone navbar__icon-item"></i>
-              </span>
-              <div class="navbar__contact-content">
-                <a href="tel:+62-123-6700-411" class="navbar__contact-title fs-400 fw-bold">Call Support</a>
-                <span class="navbar__contact-text fs-300">(+233) 50 943 8302</span>
-              </div>
-            </li>
-
-            <!-- Work Hours -->
-            <li class="navbar__contact-item">
-              <span class="navbar__icon">
-                <i class="fa fa-clock navbar__icon-item"></i>
-              </span>
-              <div class="navbar__contact-content">
-                <a href="#" class="navbar__contact-title fs-400 fw-bold">Work Hours</a>
-                <span class="navbar__contact-text fs-300">Mon - Fri 8:00 am - 5:00 pm</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
+    <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand">
+        <img src="images/hsemaster.jpg" alt="HSE Masters" class="navbar__logo">
+      </a>
+      <button class="navbar__hamburger" aria-label="Open menu">
+        <i class="fa fa-bars"></i>
+      </button>
       <nav class="navbar__nav">
         <ul class="navbar__nav-list">
-          <li class="navbar__nav-item">
-            <i class="fa fa-home navbar__nav-icon"></i>
-            <a href="index.html" class="navbar__nav-link fs-400">Home</a>
-          </li>
-          <li class="navbar__nav-item">
-            <i class="fa fa-suitcase navbar__nav-icon"></i>
-            <a href="about.html" class="navbar__nav-link fs-400">About</a>
-          </li>
-          <li class="navbar__nav-item">
-            <i class="fa fa-users navbar__nav-icon"></i>
-            <a href="team.html" class="navbar__nav-link fs-400">Team</a>
-          </li>
-          <li class="navbar__nav-item">
-            <i class="fa fa-folder-open navbar__nav-icon"></i>
-            <a href="services.html" class="navbar__nav-link fs-400">Services</a>
-          </li>
-          <li class="navbar__nav-item">
-            <i class="fa fa-home navbar__nav-icon"></i>
-            <a href="projects.html" class="navbar__nav-link fs-400">Projects</a>
-          </li>
-          <li class="navbar__nav-item">
-            <i class="fa fa-home navbar__nav-icon"></i>
-            <a href="gallery.html" class="navbar__nav-link fs-400">Gallery</a>
-          </li>
+          <li class="navbar__nav-item"><a href="index.html" class="navbar__nav-link">Home</a></li>
+          <li class="navbar__nav-item"><a href="about.html" class="navbar__nav-link">About</a></li>
+          <li class="navbar__nav-item"><a href="team.html" class="navbar__nav-link">Team</a></li>
+          <li class="navbar__nav-item"><a href="services.html" class="navbar__nav-link">Services</a></li>
+          <li class="navbar__nav-item"><a href="projects.html" class="navbar__nav-link">Projects</a></li>
+          <li class="navbar__nav-item"><a href="gallery.html" class="navbar__nav-link">Gallery</a></li>
+          <li class="navbar__nav-item"><a href="contact.html" class="navbar__nav-link">Contact</a></li>
         </ul>
-        <div class="navbar__button">
-          <a href="" class="navbar__button-link openModal fs-400 fw-bold" data-modal="modal-course">Book a Course</a>
-        </div>
+        <a href="services.html" class="navbar__cta openModal" data-modal="modal-course">Book a Course</a>
       </nav>
     </div>
   </header>
@@ -257,50 +201,62 @@
     </section>
   
   </main>
-  <footer class="footer">
+    <footer class="footer">
     <div class="footer__container">
       <div class="footer__top">
-        <div class="footer__column footer__column--logo">
-          <img src="images/hsemaster.jpg" alt="Company Logo">
-          <img src="images/ISO-9001.png" alt="ISO Certification Logo" class="footer__logo-iso">
+        <div class="footer__column footer__column--brand">
+          <img src="images/hsemaster.jpg" alt="HSE Masters Logo" class="footer__brand-logo">
+          <p class="footer__brand-tagline">Ghana&#39;s one-stop solution for all things HSSEQ &mdash; training, consultancy, technology, and supply.</p>
+          <img src="images/ISO-9001.png" alt="ISO 9001 Certified" class="footer__logo-iso">
         </div>
-        <div class="footer__column footer__column--company">
-          <h3 class="footer__heading fs-600 ff-secondary">Company</h3>
+        <div class="footer__column">
+          <h3 class="footer__heading">Services</h3>
           <ul class="footer__list">
-            <li class="footer__list-item"><a href="#training">Training</a></li>
-            <li class="footer__list-item"><a href="#consultancy">Consultancy</a></li>
-            <li class="footer__list-item"><a href="#technology">Technology</a></li>
-            <li class="footer__list-item"><a href="#supply">Supply</a></li>
+            <li class="footer__list-item"><a href="services.html#training">Training</a></li>
+            <li class="footer__list-item"><a href="services.html#consultancy">Consultancy</a></li>
+            <li class="footer__list-item"><a href="services.html#technology">Technology</a></li>
+            <li class="footer__list-item"><a href="services.html#supply">Supply</a></li>
           </ul>
         </div>
-        <div class="footer__column footer__column--support">
-          <h3 class="footer__heading ff-secondary">Support</h3>
+        <div class="footer__column">
+          <h3 class="footer__heading">Company</h3>
           <ul class="footer__list">
-            <li class="footer__list-item">Contact: (+233) 123 456 789</li>
-            <li class="footer__list-item"><a href="#careers">Careers</a></li>
-            <li class="footer__list-item"><a href="#faq">FAQ</a></li>
+            <li class="footer__list-item"><a href="about.html">About Us</a></li>
+            <li class="footer__list-item"><a href="team.html">Our Team</a></li>
+            <li class="footer__list-item"><a href="projects.html">Projects</a></li>
+            <li class="footer__list-item"><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer__column footer__column--newsletter">
-          <h3 class="footer__heading ff-secondary">Never Miss Out</h3>
-          <p class="footer__column--text">Sign up to receive the latest HSEQ+ news and trends straight to your inbox
-            from HSE Masters.</p>
-          <form class="footer__form">
-            <input type="email" placeholder="Enter your email" class="footer__form--input" required>
-            <button type="submit" class="footer__form--button">Subscribe</button>
+          <h3 class="footer__heading">Stay Connected</h3>
+          <p class="footer__column--text">Get the latest HSEQ news and insights straight to your inbox.</p>
+          <form class="footer__form" name="newsletter" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="newsletter">
+            <div class="footer__form--row">
+              <input type="email" name="email" placeholder="Your email address" class="footer__form--input" required>
+              <button type="submit" class="footer__form--button">Subscribe</button>
+            </div>
           </form>
+          <div class="footer__contact-info">
+            <a href="mailto:info@hsemastersltd.com" class="footer__contact-item">
+              <i class="fas fa-envelope"></i> info@hsemastersltd.com
+            </a>
+            <a href="tel:+233509438302" class="footer__contact-item">
+              <i class="fas fa-phone"></i> (+233) 50 943 8302
+            </a>
+          </div>
         </div>
       </div>
       <div class="footer__bottom">
         <div class="footer__social-icons">
-          <a href="#linkedin"><i class="fab fa-linkedin"></i></a>
-          <a href="#facebook"><i class="fab fa-facebook"></i></a>
-        </div>
-        <div class="footer__legal">
-          <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms & Conditions</a>
+          <a href="#linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#facebook" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
         </div>
         <div class="footer__credits">
           &copy; HSE Masters 2025. Site by Blake Infinity.
+        </div>
+        <div class="footer__legal">
+          <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms &amp; Conditions</a>
         </div>
       </div>
     </div>

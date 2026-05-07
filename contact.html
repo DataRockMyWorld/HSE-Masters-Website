@@ -36,80 +36,25 @@
     </div>
   </div>
 
-  <header class="navbar container">
-    <div class="navbar__row">
-      <div class="navbar__upper">
-        <img src="images/hsemaster.jpg" alt="HSE Masters Logo" class="navbar__logo" width="100px">
-        <div class="navbar__hamburger">
-          <i class="fa fa-bars"></i>
-        </div>
-        <div class="navbar__upper-content">
-          <ul role="list" class="navbar__contact-list">
-            <li class="navbar__contact-item">
-              <span class="navbar__icon">
-                <i class="fa fa-envelope navbar__icon-item"></i>
-              </span>
-              <div class="navbar__contact-content">
-                <a href="mailto:info@hsemastersltd.com" class="navbar__contact-title fs-400 fw-bold">Email Support</a>
-                <span class="navbar__contact-text fs-400">info@hsemastersltd.com</span>
-              </div>
-            </li>
-            <li class="navbar__contact-item">
-              <span class="navbar__icon">
-                <i class="fa fa-phone navbar__icon-item"></i>
-              </span>
-              <div class="navbar__contact-content">
-                <a href="tel:+233509438302" class="navbar__contact-title fs-400 fw-bold">Call Support</a>
-                <span class="navbar__contact-text fs-300">(+233) 50 943 8302</span>
-              </div>
-            </li>
-            <li class="navbar__contact-item">
-              <span class="navbar__icon">
-                <i class="fa fa-clock navbar__icon-item"></i>
-              </span>
-              <div class="navbar__contact-content">
-                <a href="#" class="navbar__contact-title fs-400 fw-bold">Work Hours</a>
-                <span class="navbar__contact-text fs-300">Mon - Fri 8:00 am - 5:00 pm</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
+    <header class="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand">
+        <img src="images/hsemaster.jpg" alt="HSE Masters" class="navbar__logo">
+      </a>
+      <button class="navbar__hamburger" aria-label="Open menu">
+        <i class="fa fa-bars"></i>
+      </button>
       <nav class="navbar__nav">
         <ul class="navbar__nav-list">
-          <li class="navbar__nav-item">
-            <i class="fa fa-home navbar__nav-icon"></i>
-            <a href="index.html" class="navbar__nav-link fs-400">Home</a>
-          </li>
-          <li class="navbar__nav-item">
-            <i class="fa fa-suitcase navbar__nav-icon"></i>
-            <a href="about.html" class="navbar__nav-link fs-400">About</a>
-          </li>
-          <li class="navbar__nav-item">
-            <i class="fa fa-users navbar__nav-icon"></i>
-            <a href="team.html" class="navbar__nav-link fs-400">Team</a>
-          </li>
-          <li class="navbar__nav-item">
-            <i class="fa fa-folder-open navbar__nav-icon"></i>
-            <a href="services.html" class="navbar__nav-link fs-400">Services</a>
-          </li>
-          <li class="navbar__nav-item">
-            <i class="fa fa-diagram-project navbar__nav-icon"></i>
-            <a href="projects.html" class="navbar__nav-link fs-400">Projects</a>
-          </li>
-          <li class="navbar__nav-item">
-            <i class="fa fa-images navbar__nav-icon"></i>
-            <a href="gallery.html" class="navbar__nav-link fs-400">Gallery</a>
-          </li>
-          <li class="navbar__nav-item">
-            <i class="fa fa-envelope navbar__nav-icon"></i>
-            <a href="contact.html" class="navbar__nav-link fs-400">Contact</a>
-          </li>
+          <li class="navbar__nav-item"><a href="index.html" class="navbar__nav-link">Home</a></li>
+          <li class="navbar__nav-item"><a href="about.html" class="navbar__nav-link">About</a></li>
+          <li class="navbar__nav-item"><a href="team.html" class="navbar__nav-link">Team</a></li>
+          <li class="navbar__nav-item"><a href="services.html" class="navbar__nav-link">Services</a></li>
+          <li class="navbar__nav-item"><a href="projects.html" class="navbar__nav-link">Projects</a></li>
+          <li class="navbar__nav-item"><a href="gallery.html" class="navbar__nav-link">Gallery</a></li>
+          <li class="navbar__nav-item"><a href="contact.html" class="navbar__nav-link">Contact</a></li>
         </ul>
-        <div class="navbar__button">
-          <a href="services.html" class="navbar__button-link openModal fs-400 fw-bold" data-modal="modal-course">Book a Course</a>
-        </div>
+        <a href="services.html" class="navbar__cta openModal" data-modal="modal-course">Book a Course</a>
       </nav>
     </div>
   </header>
@@ -221,16 +166,14 @@
     </section>
   </main>
 
-  <footer class="footer">
+    <footer class="footer">
     <div class="footer__container">
       <div class="footer__top">
-        <!-- Brand -->
         <div class="footer__column footer__column--brand">
           <img src="images/hsemaster.jpg" alt="HSE Masters Logo" class="footer__brand-logo">
-          <p class="footer__brand-tagline">Ghana's one-stop solution for all things HSSEQ — training, consultancy, technology, and supply.</p>
+          <p class="footer__brand-tagline">Ghana&#39;s one-stop solution for all things HSSEQ &mdash; training, consultancy, technology, and supply.</p>
           <img src="images/ISO-9001.png" alt="ISO 9001 Certified" class="footer__logo-iso">
         </div>
-        <!-- Services -->
         <div class="footer__column">
           <h3 class="footer__heading">Services</h3>
           <ul class="footer__list">
@@ -240,7 +183,6 @@
             <li class="footer__list-item"><a href="services.html#supply">Supply</a></li>
           </ul>
         </div>
-        <!-- Company -->
         <div class="footer__column">
           <h3 class="footer__heading">Company</h3>
           <ul class="footer__list">
@@ -250,7 +192,6 @@
             <li class="footer__list-item"><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
-        <!-- Newsletter -->
         <div class="footer__column footer__column--newsletter">
           <h3 class="footer__heading">Stay Connected</h3>
           <p class="footer__column--text">Get the latest HSEQ news and insights straight to your inbox.</p>
