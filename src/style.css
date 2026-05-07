@@ -5816,18 +5816,17 @@ html {
   cursor: pointer;
 }
 
-.fw__panel::before {
-  content: '';
+.fw__img {
   position: absolute;
   inset: 0;
-  background-image: var(--img);
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.7s ease;
   z-index: 0;
 }
 
-.fw__panel:hover::before {
+.fw__panel:hover .fw__img {
   transform: scale(1.08);
 }
 
@@ -6197,18 +6196,17 @@ html {
   cursor: pointer;
 }
 
-.av__panel::before {
-  content: '';
+.av__img {
   position: absolute;
   inset: 0;
-  background-image: var(--img);
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.7s ease;
   z-index: 0;
 }
 
-.av__panel:hover::before {
+.av__panel:hover .av__img {
   transform: scale(1.06);
 }
 
