@@ -6482,3 +6482,238 @@ html {
     height: 280px;
   }
 }
+
+/* ===================================================
+   LIGHT / PROFESSIONAL THEME
+   Replaces the editorial dark aesthetic with a clean,
+   navy-and-white palette suited to enterprise clients
+   in the HSE / QSHE sector.
+
+   Colour tokens:
+     White sections  #ffffff
+     Off-white       #f5f7fa
+     Deep navy       #0d1b3e   (dark text, dark panels)
+     Gold            #ffd808   (accent – unchanged)
+   =================================================== */
+
+/* --- Navbar: white bar, navy links --- */
+.navbar {
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(13,27,62,0.1) !important;
+  box-shadow: 0 2px 12px rgba(13,27,62,0.06) !important;
+}
+.navbar.scrolled {
+  box-shadow: 0 4px 24px rgba(13,27,62,0.12) !important;
+  border-bottom-color: rgba(13,27,62,0.14) !important;
+}
+.navbar__hamburger {
+  color: #0d1b3e !important;
+}
+.navbar__hamburger:hover {
+  color: var(--clr-accent-400) !important;
+}
+.navbar__nav-link {
+  color: rgba(13,27,62,0.6) !important;
+}
+.navbar__nav-item:hover .navbar__nav-link {
+  color: #0d1b3e !important;
+}
+
+@media (max-width: 900px) {
+  .navbar__nav {
+    background: #ffffff !important;
+    border-top: 1px solid rgba(13,27,62,0.08) !important;
+  }
+  .navbar__nav-link {
+    border-bottom: 1px solid rgba(13,27,62,0.06) !important;
+    color: rgba(13,27,62,0.7) !important;
+  }
+}
+
+/* --- Hero: off-white left panel, navy text --- */
+.hero {
+  background: #f5f7fa !important;
+}
+.hero__left {
+  border-right-color: rgba(13,27,62,0.08) !important;
+}
+.hero__badge {
+  color: rgba(13,27,62,0.45) !important;
+  border-color: rgba(13,27,62,0.12) !important;
+}
+.hero__title {
+  color: #0d1b3e !important;
+}
+.hero__title em {
+  color: var(--clr-accent-400) !important;
+}
+.hero__sub {
+  color: rgba(13,27,62,0.55) !important;
+}
+.hero__btn--outline {
+  color: rgba(13,27,62,0.68) !important;
+  border-color: rgba(13,27,62,0.18) !important;
+}
+.hero__btn--outline:hover {
+  color: #0d1b3e !important;
+  border-color: var(--clr-accent-400) !important;
+}
+.hero__stats {
+  border-top-color: rgba(13,27,62,0.08) !important;
+}
+.hero__stat-num {
+  color: #0d1b3e !important;
+}
+.hero__stat-label {
+  color: rgba(13,27,62,0.4) !important;
+}
+.hero__right-overlay {
+  background: linear-gradient(to right,
+    #f5f7fa 0%,
+    rgba(245,247,250,0.18) 38%,
+    transparent 100%) !important;
+}
+
+@media (max-width: 900px) {
+  .hero__right-overlay {
+    background: linear-gradient(to bottom,
+      #f5f7fa 0%, transparent 40%) !important;
+  }
+}
+
+/* --- What We Do bento (home): white bg, navy title --- */
+.wwd {
+  background: #ffffff !important;
+}
+.wwd__title {
+  color: #0d1b3e !important;
+}
+/* Photo panels keep their dark-overlay style — text stays white */
+
+/* --- Featured Works bento (home): off-white bg, navy title --- */
+.fw {
+  background: #f5f7fa !important;
+}
+.fw__title {
+  color: #0d1b3e !important;
+}
+
+/* --- Clients carousel: off-white, navy heading --- */
+.clients-carousel {
+  background: #f5f7fa !important;
+  background-image: none !important;
+}
+.clients-carousel h3 {
+  color: #0d1b3e !important;
+}
+.clients-carousel h3::after {
+  background: var(--clr-accent-400) !important;
+}
+
+/* --- Quote / CTA strip: deep navy (professional contrast block) --- */
+.quote__section {
+  background: #0d1b3e !important;
+}
+.quote__section-text {
+  color: #ffffff !important;
+}
+.quote__button-link {
+  background-color: var(--clr-accent-400) !important;
+  color: #000 !important;
+  box-shadow: 0 8px 25px rgba(255,216,8,0.2) !important;
+}
+
+/* --- About page header: white bg --- */
+.about__section {
+  background: #ffffff !important;
+}
+.about__heading {
+  color: #0d1b3e !important;
+}
+.about__text {
+  color: rgba(13,27,62,0.62) !important;
+}
+
+/* --- What We Do text block (about page): off-white --- */
+.what-we-do {
+  background: #f5f7fa !important;
+}
+.what-we-do__heading {
+  color: #0d1b3e !important;
+}
+.what-we-do__text {
+  color: rgba(13,27,62,0.65) !important;
+}
+
+/* --- Original Mission / Vision section (navy) --- */
+.mission-vision {
+  background: #0d1b3e !important;
+}
+
+/* --- Journey timeline (about): white bg, navy text --- */
+.journey {
+  background: #ffffff !important;
+}
+.journey__title {
+  color: #0d1b3e !important;
+}
+.journey__list {
+  border-left-color: rgba(13,27,62,0.15) !important;
+}
+.journey__item::before {
+  border-color: #ffffff !important;
+}
+.journey__icon {
+  color: rgba(13,27,62,0.22) !important;
+}
+.journey__name {
+  color: #0d1b3e !important;
+}
+.journey__desc {
+  color: rgba(13,27,62,0.58) !important;
+}
+
+/* --- About Values bento: off-white bg, navy title --- */
+.about-values {
+  background: #f5f7fa !important;
+}
+.av__title {
+  color: #0d1b3e !important;
+}
+
+/* --- Mission & Vision split panels (about): keep photo overlays --- */
+/* .mv panels are photo-based with overlays — no change needed */
+
+/* --- Page hero banners (projects, team, services, gallery) --- */
+.projects__header,
+.team__header,
+.services__header,
+.gallery__header {
+  background: linear-gradient(135deg, #0d1b3e 0%, #132347 100%) !important;
+}
+
+/* --- Team & projects CTA section --- */
+.team__cta,
+.projects__cta {
+  background: linear-gradient(135deg, #0d1b3e 0%, #132347 100%) !important;
+}
+
+/* --- Scroll-to-top button: navy --- */
+.scroll-to-top {
+  background: #0d1b3e !important;
+  border-color: rgba(255,216,8,0.3) !important;
+  box-shadow: 0 4px 16px rgba(13,27,62,0.3) !important;
+}
+.scroll-to-top:hover {
+  background: var(--clr-accent-400) !important;
+  border-color: var(--clr-accent-400) !important;
+  color: #000 !important;
+}
+
+/* --- Footer: deep navy (professional standard) --- */
+.footer {
+  background: #0d1b3e !important;
+}
+.footer__top {
+  border-bottom-color: rgba(255,216,8,0.18) !important;
+}
