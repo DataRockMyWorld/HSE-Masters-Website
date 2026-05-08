@@ -7122,3 +7122,175 @@ html {
         rgba(13,27,62,0.4) 100%);
   }
 }
+
+/* ===================================================
+   PAGE HERO — Reusable inner-page banner
+   Used on: About, Team, Services, Projects, Gallery,
+   Contact. Same cinematic language as the home hero
+   but shorter (65 vh) and content-focused.
+   =================================================== */
+
+.page-hero {
+  position: relative;
+  min-height: 65vh;
+  background: #0d1b3e;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background image */
+.page-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.page-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  transition: transform 18s ease;
+}
+.page-hero:hover .page-hero__img {
+  transform: scale(1.04);
+}
+/* Same gradient language as home hero */
+.page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(105deg,
+      rgba(13,27,62,0.94) 0%,
+      rgba(13,27,62,0.76) 38%,
+      rgba(13,27,62,0.38) 65%,
+      rgba(13,27,62,0.1)  100%),
+    linear-gradient(to top,
+      rgba(13,27,62,0.7) 0%,
+      transparent 55%);
+}
+
+/* Content row: text left, ISO badge right */
+.page-hero__body {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 90px 0 68px;
+  gap: 40px;
+}
+
+.page-hero__content {
+  max-width: 640px;
+}
+
+/* Eyebrow */
+.page-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.68rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.48);
+  font-family: var(--ff-secondary);
+  margin-bottom: 22px;
+  animation: fadeInUp 0.6s ease-out both;
+}
+.page-hero__eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--clr-accent-400);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px rgba(255,216,8,0.18);
+}
+
+/* Page title */
+.page-hero__title {
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 0.94;
+  letter-spacing: -0.022em;
+  margin-bottom: 22px;
+  animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+/* Subtitle */
+.page-hero__sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.52);
+  line-height: 1.78;
+  max-width: 500px;
+  margin-bottom: 32px;
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+/* Credential strip (same as home hero) */
+.page-hero__creds {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+.page-hero__cred {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.73rem;
+  font-family: var(--ff-secondary);
+  color: rgba(255,255,255,0.42);
+  letter-spacing: 0.03em;
+}
+.page-hero__cred i {
+  color: var(--clr-accent-400);
+  font-size: 0.85rem;
+}
+.page-hero__cred-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255,255,255,0.14);
+  flex-shrink: 0;
+}
+
+/* ISO badge — floating bottom-right */
+.page-hero__iso {
+  flex-shrink: 0;
+  align-self: flex-end;
+  animation: fadeInUp 0.6s ease-out 0.35s both;
+}
+.page-hero__iso-img {
+  height: 88px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.55;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .page-hero {
+    min-height: 58vh;
+  }
+  .page-hero__body {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 72px 0 52px;
+  }
+  .page-hero__title {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+  }
+  .page-hero__sub {
+    font-size: 0.93rem;
+  }
+  .page-hero__iso {
+    display: none;
+  }
+}
