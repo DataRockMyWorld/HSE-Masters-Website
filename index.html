@@ -25,7 +25,7 @@
     </div>
   </div>
 
-    <header class="navbar">
+    <header class="navbar navbar--hero">
     <div class="navbar__inner">
       <a href="index.html" class="navbar__brand">
         <img src="images/hsemaster.jpg" alt="HSE Masters" class="navbar__logo">
@@ -52,41 +52,69 @@
   <main>
     <!-- Hero -->
     <section class="hero">
-      <div class="hero__split">
-        <!-- Left: Text Panel -->
-        <div class="hero__left">
-          <div class="hero__badges">
-            <span class="hero__badge">Est. 2015</span>
-            <span class="hero__badge">ISO 9001 Certified</span>
+      <!-- Full-bleed background -->
+      <div class="hero__media">
+        <img fetchpriority="high" src="images/section-01.jpg" alt="HSE Masters team at work" class="hero__media-img">
+        <div class="hero__media-overlay"></div>
+      </div>
+      <!-- Content layer -->
+      <div class="hero__body">
+        <div class="hero__content">
+          <div class="hero__eyebrow ff-secondary">
+            <span class="hero__eyebrow-dot"></span>
+            Ghana's Premier HSSEQ Partner
           </div>
           <h1 class="hero__title ff-secondary">
-            One Stop<br>for All Things<br><em>HSSEQ</em>
+            One Stop<br>for All Things<br><em>HSSEQ.</em>
           </h1>
-          <p class="hero__sub ff-secondary">Ghana's most trusted partner in health, safety, environment, and quality — training, consultancy, technology, and supply.</p>
+          <p class="hero__sub ff-secondary">
+            Training, consultancy, technology and supply — trusted by leading organisations across West Africa since 2015.
+          </p>
           <div class="hero__actions">
-            <a href="" class="hero__btn hero__btn--primary openModal ff-secondary" data-modal="modal-expert">Talk to an Expert</a>
-            <a href="" class="hero__btn hero__btn--outline openModal ff-secondary" data-modal="modal-quote">Get a Quote</a>
+            <a href="services.html" class="hero__btn hero__btn--primary ff-secondary openModal" data-modal="modal-expert">Talk to an Expert</a>
+            <a href="services.html" class="hero__btn hero__btn--ghost ff-secondary">Our Services &nbsp;<i class="fas fa-arrow-right"></i></a>
           </div>
-          <div class="hero__stats">
-            <div class="hero__stat">
-              <span class="hero__stat-num ff-secondary">200+</span>
-              <span class="hero__stat-label ff-secondary">Projects</span>
+          <div class="hero__creds">
+            <div class="hero__cred">
+              <i class="fas fa-certificate"></i>
+              <span class="ff-secondary">ISO 9001 Certified</span>
             </div>
-            <div class="hero__stat">
-              <span class="hero__stat-num ff-secondary">40+</span>
-              <span class="hero__stat-label ff-secondary">Clients</span>
+            <div class="hero__cred-divider"></div>
+            <div class="hero__cred">
+              <i class="fas fa-shield-alt"></i>
+              <span class="ff-secondary">Est. 2015</span>
             </div>
-            <div class="hero__stat">
-              <span class="hero__stat-num ff-secondary">10+</span>
-              <span class="hero__stat-label ff-secondary">Years</span>
+            <div class="hero__cred-divider"></div>
+            <div class="hero__cred">
+              <i class="fas fa-globe-africa"></i>
+              <span class="ff-secondary">West Africa</span>
             </div>
           </div>
         </div>
-        <!-- Right: Image Panel -->
-        <div class="hero__right">
-          <img fetchpriority="high" src="images/section-01.jpg" alt="HSE Masters in action" class="hero__img">
-          <div class="hero__right-overlay"></div>
+        <!-- Floating stats card -->
+        <div class="hero__stats-card">
+          <div class="hero__stat">
+            <span class="hero__stat-num ff-secondary">200+</span>
+            <span class="hero__stat-label ff-secondary">Projects</span>
+          </div>
+          <div class="hero__stat-rule"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num ff-secondary">40+</span>
+            <span class="hero__stat-label ff-secondary">Clients</span>
+          </div>
+          <div class="hero__stat-rule"></div>
+          <div class="hero__stat">
+            <span class="hero__stat-num ff-secondary">10+</span>
+            <span class="hero__stat-label ff-secondary">Years</span>
+          </div>
         </div>
+      </div>
+      <!-- Scroll cue -->
+      <div class="hero__scroll-cue">
+        <div class="hero__scroll-mouse">
+          <div class="hero__scroll-wheel"></div>
+        </div>
+        <span class="ff-secondary hero__scroll-text">Scroll</span>
       </div>
     </section>
 
