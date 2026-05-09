@@ -78,6 +78,8 @@ html:focus-within {
 html,
 body {
   height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* Set core body defaults */
@@ -1588,7 +1590,7 @@ button .footer__form--button {
   }
 
   .container {
-    width: 100vw;
+    width: 100%;
   }
 
   .intro__content {
@@ -1956,7 +1958,7 @@ button .footer__form--button {
   }
 
   .container {
-    width: 100vw;
+    width: 100%;
   }
 
   .intro__content {
@@ -6729,8 +6731,12 @@ html {
   transition: background 0.35s ease, box-shadow 0.35s ease, border-bottom-color 0.35s ease !important;
 }
 
-/* Transparent state: used only on index.html via .navbar--hero */
+/* Transparent state: fixed overlay on hero pages */
 .navbar--hero {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: transparent !important;
   border-top-color: transparent !important;
   border-bottom-color: transparent !important;
@@ -7184,7 +7190,7 @@ html {
   max-width: 1280px;
   width: 90%;
   margin: 0 auto;
-  padding: 90px 0 68px;
+  padding: 140px 0 68px;
   gap: 40px;
 }
 
@@ -7284,7 +7290,7 @@ html {
   .page-hero__body {
     flex-direction: column;
     align-items: flex-start;
-    padding: 72px 0 52px;
+    padding: 110px 0 52px;
   }
   .page-hero__title {
     font-size: clamp(2.2rem, 9vw, 3rem);
@@ -9298,5 +9304,157 @@ a.ctc-info-card:hover {
 }
 .navbar--hero:not(.scrolled) .navbar__hamburger {
   color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* ==========================================================================
+   MOBILE FIXES — additional responsive polish
+   Must come after all other rules to win specificity.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Page hero — small phones (< 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .page-hero {
+    min-height: 50vh;
+  }
+  .page-hero__body {
+    padding: 96px 0 36px;
+  }
+  .page-hero__title {
+    font-size: clamp(1.7rem, 7.5vw, 2.2rem);
+  }
+  .page-hero__sub {
+    font-size: 0.86rem;
+  }
+  /* Hide dividers so credentials wrap cleanly */
+  .page-hero__cred-divider {
+    display: none;
+  }
+  .page-hero__creds {
+    gap: 10px;
+    row-gap: 6px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Services svc-nav tabs — keep scrollable, tighten on small phones
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .svc-nav__tab {
+    padding: 12px 14px;
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+  .svc-section {
+    padding: 56px 0;
+  }
+  .svc-section__header {
+    margin-bottom: 36px;
+  }
+  .svc-section__title {
+    font-size: clamp(1.6rem, 6vw, 2rem);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Quote / CTA section — text sizing on mobile
+   -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .quote__section {
+    padding: 40px 0;
+  }
+  .quote__section-text h2,
+  .quote__section-text .fs-primary-heading {
+    font-size: 1.55rem;
+    line-height: 1.25;
+  }
+  .quote__section-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Stats section — compact on phones
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .stats-section {
+    padding: 28px 16px;
+  }
+  .stats-container {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .number {
+    font-size: 2.2rem !important;
+  }
+  .label {
+    font-size: 0.82rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Projects — proj-stats wraps to 2×2 on tiny screens
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .proj-stats__item {
+    flex: 1 1 calc(50% - 16px);
+  }
+  .proj-filter__btn {
+    padding: 10px 12px;
+    font-size: 0.73rem;
+  }
+  .proj-card__img {
+    height: 180px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Contact page — very small phones
+   -------------------------------------------------------------------------- */
+@media (max-width: 400px) {
+  .ctc-panel,
+  .ctc-form-panel {
+    padding: 32px 16px;
+  }
+  .ctc-info-card {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+  .ctc-form__submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Footer brand column — don't overflow on small phones
+   -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+  .footer__column--brand {
+    width: 100% !important;
+  }
+  .footer__brand-logo {
+    max-width: 140px;
+  }
+  .footer__bottom {
+    padding: 16px 0 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   General — ensure all section inners don't overflow
+   -------------------------------------------------------------------------- */
+.svc-section__inner,
+.proj-stats__inner,
+.ctc-split,
+.page-hero__body {
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .svc-section__inner {
+    width: 92%;
+  }
 }
 
