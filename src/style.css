@@ -8940,3 +8940,17 @@ html {
   }
 }
 
+/* ===================================================
+   NAVBAR--HERO: guarantee white links in transparent state
+   Uses :not(.scrolled) for maximum specificity — must stay last.
+   =================================================== */
+.navbar--hero:not(.scrolled) .navbar__nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.navbar--hero:not(.scrolled) .navbar__nav-item:hover .navbar__nav-link {
+  color: #ffffff !important;
+}
+.navbar--hero:not(.scrolled) .navbar__hamburger {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
