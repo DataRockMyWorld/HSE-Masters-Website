@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="images/png" href="images/favicon-32x32.png">
-  <link rel="stylesheet" href="src/style.css">  <title>HSE-Maters Home Page</title>
+  <link rel="stylesheet" href="src/style.css">
+  <title>Services — HSE Masters</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&family=Saira:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
 </head>
 
 <body>
-    <header class="navbar">
+  <header class="navbar navbar--hero">
     <div class="navbar__inner">
       <a href="index.html" class="navbar__brand">
         <img src="images/hsemaster.jpg" alt="HSE Masters" class="navbar__logo">
@@ -39,7 +40,10 @@
       </nav>
     </div>
   </header>
+
   <main>
+
+    <!-- ===================== BOOK A COURSE MODAL ===================== -->
     <div class="modal" id="modal-course">
       <div class="modal-content">
         <span class="modal-close">&times;</span>
@@ -54,10 +58,27 @@
             <option value="">Select a Course</option>
             <optgroup label="ISO Trainings">
               <option value="iso-45001">ISO 45001 Lead Auditor Training</option>
+              <option value="iso-14001">ISO 14001 Internal Auditor Training</option>
+              <option value="iso-9001">ISO 9001 Lead Auditor Training</option>
             </optgroup>
-            <optgroup label="Safety Trainings">
-              <option value="fire-safety">Basic Fire Safety</option>
-              <option value="first-aid">First Aid Training</option>
+            <optgroup label="First Aid">
+              <option value="basic-first-aid">Basic First Aid</option>
+              <option value="occ-first-aid">Occupational First Aid</option>
+            </optgroup>
+            <optgroup label="Fire Safety">
+              <option value="fire-safety">Basic Fire Fighting</option>
+              <option value="fire-warden">Fire Warden Training</option>
+              <option value="fire-risk">Fire Risk Assessment</option>
+            </optgroup>
+            <optgroup label="Rescue">
+              <option value="wah-rescue">Working at Height &amp; Rescue</option>
+              <option value="confined-space">Confined Space Entry &amp; Rescue</option>
+              <option value="emergency-response">Emergency Response</option>
+            </optgroup>
+            <optgroup label="Other Trainings">
+              <option value="manual-handling">Manual Handling</option>
+              <option value="incident-investigation">Incident Investigation</option>
+              <option value="hseq-management">HSEQ Management</option>
             </optgroup>
           </select>
           <textarea placeholder="Specifications" required></textarea>
@@ -66,382 +87,552 @@
         </form>
       </div>
     </div>
-    <section class="services__header ff-secondary">
-        <div class="services__header-content">
-            <h1 class="services__header-title fs-800">Our Professional Services</h1>
-            <p>From trainings, consultancy, procurement and HSEEQ app solutions, HSE Masters has refined and perfected an approach to service provision that delivers results.</p>
-        </div>
-    </section>
-    <section class="services__overview ff-secondary">
-      <div class="container">
-        <div class="services__grid">
-          <!-- Service 1: Training -->
-          <a href="#training" class="service__tile">
-            <div class="service__tile-icon">📚</div>
-            <h3 class="service__tile-title">Training</h3>
-            <p class="service__tile-desc">Professional HSEQ training programs</p>
-            <div class="service__tile-arrow">
-              <i class="fas fa-arrow-down"></i>
-            </div>
-          </a>
 
-          <!-- Service 2: Consultancy -->
-          <a href="#consultancy" class="service__tile">
-            <div class="service__tile-icon">💼</div>
-            <h3 class="service__tile-title">Consultancy</h3>
-            <p class="service__tile-desc">ISO certification & compliance guidance</p>
-            <div class="service__tile-arrow">
-              <i class="fas fa-arrow-down"></i>
-            </div>
-          </a>
-
-          <!-- Service 3: Technology -->
-          <a href="#technology" class="service__tile">
-            <div class="service__tile-icon">💻</div>
-            <h3 class="service__tile-title">Technology</h3>
-            <p class="service__tile-desc">Comprehensive HSSE management software</p>
-            <div class="service__tile-arrow">
-              <i class="fas fa-arrow-down"></i>
-            </div>
-          </a>
-
-          <!-- Service 4: Supply -->
-          <a href="#supply" class="service__tile">
-            <div class="service__tile-icon">📦</div>
-            <h3 class="service__tile-title">Supply</h3>
-            <p class="service__tile-desc">Quality safety equipment & PPE</p>
-            <div class="service__tile-arrow">
-              <i class="fas fa-arrow-down"></i>
-            </div>
-          </a>
-        </div>
+    <!-- ===================== GET A QUOTE MODAL ===================== -->
+    <div class="modal" id="modal-quote">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h3 class="modal__form-title ff-secondary fs-700 fw-bold">Get a Quote</h3>
+        <form>
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="text" placeholder="Phone Number" required>
+          <input type="text" placeholder="Organisation" required>
+          <select required>
+            <option value="">Service of Interest</option>
+            <option value="technology">HSSE Management Software</option>
+            <option value="supply">Safety Equipment &amp; PPE Supply</option>
+            <option value="consultancy">ISO Consultancy</option>
+            <option value="training">Training Programs</option>
+          </select>
+          <textarea placeholder="Describe your requirements" required></textarea>
+          <button type="submit">Request Quote</button>
+        </form>
       </div>
-    </section>
-    <section class="service__training" id="training">
-      <div class="container">
-        <h2 class="training__heading">Training Programs</h2>
-        <!-- Tab Buttons -->
-        <div class="training__tabs">
-          <button class="training__tab" data-target="first-aid"><span>First Aid</span></button>
-          <button class="training__tab" data-target="fire-fighting"><span>Fire Fighting</span></button>
-          <button class="training__tab" data-target="rescue"><span>Rescue</span></button>
-          <button class="training__tab" data-target="other"><span>Other Trainings</span></button>
-        </div>
-        <!-- Tab Content -->
-        <div class="training__content">
-          <!-- First Aid Category -->
-          <div class="training__category" id="first-aid">
-            <div class="training__course-card">
-              <div class="training__course-icon">⛑️</div>
-              <div class="training__course-title">Basic First Aid</div>
-              <div class="training__course-description">
-                Learn essential first aid techniques, CPR, and emergency response fundamentals.
-              </div>
-            </div>
-          </div>
-          <!-- Fire Fighting Category -->
-          <div class="training__category" id="fire-fighting">
-            <div class="training__course-card">
-              <div class="training__course-icon">🔥</div>
-              <div class="training__course-title">Basic Fire Fighting</div>
-              <div class="training__course-description">
-                An introduction to fire safety and fundamental firefighting techniques.
-              </div>
-            </div>
-          </div>
-          <!-- Rescue Category -->
-          <div class="training__category" id="rescue">
-            <div class="training__course-card">
-              <div class="training__course-icon">🪜</div>
-              <div class="training__course-title">Working at Height & Rescue</div>
-              <div class="training__course-description">
-                Techniques and safety procedures for working in high-risk environments.
-              </div>
-            </div>
-          </div>
-          <!-- Other Trainings Category -->
-          <div class="training__category" id="other">
-            <div class="training__course-card">
-              <div class="training__course-icon">📦</div>
-              <div class="training__course-title">Manual Handling</div>
-              <div class="training__course-description">
-                Proper techniques for lifting, carrying, and moving loads safely.
-              </div>
-            </div>
+    </div>
+
+    <!-- ===================== PAGE HERO ===================== -->
+    <section class="page-hero">
+      <div class="page-hero__media">
+        <img loading="lazy" src="images/feat-w-1.jpeg" alt="HSE Masters professional services" class="page-hero__img">
+        <div class="page-hero__overlay"></div>
+      </div>
+      <div class="page-hero__body">
+        <div class="page-hero__content">
+          <span class="page-hero__eyebrow ff-secondary"><span class="page-hero__eyebrow-dot"></span>What We Offer</span>
+          <h1 class="page-hero__title ff-secondary">Our Services</h1>
+          <p class="page-hero__sub ff-secondary">Training, consultancy, technology and supply —<br>end-to-end HSSEQ solutions for every stage of your journey.</p>
+          <div class="page-hero__creds">
+            <div class="page-hero__cred"><i class="fas fa-graduation-cap"></i><span class="ff-secondary">Training</span></div>
+            <div class="page-hero__cred-divider"></div>
+            <div class="page-hero__cred"><i class="fas fa-clipboard-check"></i><span class="ff-secondary">Consultancy</span></div>
+            <div class="page-hero__cred-divider"></div>
+            <div class="page-hero__cred"><i class="fas fa-laptop-code"></i><span class="ff-secondary">Technology</span></div>
+            <div class="page-hero__cred-divider"></div>
+            <div class="page-hero__cred"><i class="fas fa-hard-hat"></i><span class="ff-secondary">Supply</span></div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Consultancy Section -->
-    <section class="service__consultancy ff-secondary" id="consultancy">
-      <div class="container">
-        <!-- Part 1: Scope of Work -->
-        <div class="consultancy__scope">
-          <h2 class="consultancy__heading">ISO Certification Journey</h2>
-          <p class="consultancy__subtext">We guide you through every step to achieve and maintain ISO certification excellence</p>
+
+    <!-- ===================== SERVICE NAV STRIP ===================== -->
+    <nav class="svc-nav" aria-label="Service sections">
+      <div class="svc-nav__inner">
+        <a href="#training" class="svc-nav__tab"><i class="fas fa-graduation-cap"></i><span class="ff-secondary">Training</span></a>
+        <a href="#consultancy" class="svc-nav__tab"><i class="fas fa-clipboard-check"></i><span class="ff-secondary">Consultancy</span></a>
+        <a href="#technology" class="svc-nav__tab"><i class="fas fa-laptop-code"></i><span class="ff-secondary">Technology</span></a>
+        <a href="#supply" class="svc-nav__tab"><i class="fas fa-hard-hat"></i><span class="ff-secondary">Supply</span></a>
+        <a href="#environmental" class="svc-nav__tab"><i class="fas fa-flask"></i><span class="ff-secondary">Environmental &amp; Lab</span></a>
+      </div>
+    </nav>
+
+    <!-- ===================== TRAINING SECTION ===================== -->
+    <section class="svc-section svc-section--light" id="training">
+      <div class="svc-section__inner">
+        <div class="svc-section__header">
+          <span class="svc-section__eyebrow">01 / Training</span>
+          <h2 class="svc-section__title">Professional Training Programs</h2>
+          <p class="svc-section__sub">Accredited, practical-first training across health, safety, fire, rescue, and management disciplines — equipping your workforce with the skills that save lives.</p>
         </div>
-    
-        <!-- Modern Process Flow -->
-        <div class="consultancy__process">
-          <!-- Step 1 -->
-          <div class="process__step">
-            <div class="process__number">01</div>
-            <div class="process__content">
-              <div class="process__icon">
-                <i class="fas fa-search"></i>
-              </div>
-              <h3 class="process__title">Gap Analysis</h3>
-              <p class="process__desc">Comprehensive assessment of your current systems against ISO requirements</p>
-            </div>
-            <div class="process__connector"></div>
+
+        <!-- Tab Bar -->
+        <div class="svc-tabs">
+          <div class="svc-tabs__bar">
+            <button class="svc-tabs__btn active ff-secondary" data-tab="tab-first-aid"><i class="fas fa-heartbeat"></i> First Aid</button>
+            <button class="svc-tabs__btn ff-secondary" data-tab="tab-fire"><i class="fas fa-fire-extinguisher"></i> Fire Safety</button>
+            <button class="svc-tabs__btn ff-secondary" data-tab="tab-rescue"><i class="fas fa-hard-hat"></i> Rescue</button>
+            <button class="svc-tabs__btn ff-secondary" data-tab="tab-iso"><i class="fas fa-certificate"></i> ISO Trainings</button>
+            <button class="svc-tabs__btn ff-secondary" data-tab="tab-other"><i class="fas fa-clipboard-list"></i> Other</button>
           </div>
 
-          <!-- Step 2 -->
-          <div class="process__step">
-            <div class="process__number">02</div>
-            <div class="process__content">
-              <div class="process__icon">
-                <i class="fas fa-code"></i>
-              </div>
-              <h3 class="process__title">System Development</h3>
-              <p class="process__desc">Design and develop customized management systems for your organization</p>
+          <!-- First Aid Panel -->
+          <div class="svc-tabs__panel active" id="tab-first-aid">
+            <div class="svc-courses">
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-heartbeat"></i></div>
+                <span class="svc-course__badge">Foundation</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 2 Days</div>
+                <h3 class="svc-course__title ff-secondary">Basic First Aid</h3>
+                <p class="svc-course__desc ff-secondary">Learn essential first aid techniques, CPR, wound management, and emergency response fundamentals for the workplace.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-user-md"></i></div>
+                <span class="svc-course__badge svc-course__badge--mid">Intermediate</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 5 Days</div>
+                <h3 class="svc-course__title ff-secondary">Occupational First Aid</h3>
+                <p class="svc-course__desc ff-secondary">Comprehensive occupational first aid training covering advanced life support, patient assessment, and workplace incident management.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
             </div>
-            <div class="process__connector"></div>
           </div>
 
-          <!-- Step 3 -->
-          <div class="process__step">
-            <div class="process__number">03</div>
-            <div class="process__content">
-              <div class="process__icon">
-                <i class="fas fa-play-circle"></i>
-              </div>
-              <h3 class="process__title">Implementation</h3>
-              <p class="process__desc">Seamless integration and deployment of systems across your operations</p>
+          <!-- Fire Safety Panel -->
+          <div class="svc-tabs__panel" id="tab-fire">
+            <div class="svc-courses">
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-fire-extinguisher"></i></div>
+                <span class="svc-course__badge">Foundation</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 1 Day</div>
+                <h3 class="svc-course__title ff-secondary">Basic Fire Fighting</h3>
+                <p class="svc-course__desc ff-secondary">Introduction to fire behaviour, extinguisher types, evacuation procedures, and practical fire suppression techniques.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-shield-alt"></i></div>
+                <span class="svc-course__badge svc-course__badge--mid">Intermediate</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 2 Days</div>
+                <h3 class="svc-course__title ff-secondary">Fire Warden Training</h3>
+                <p class="svc-course__desc ff-secondary">Equips fire wardens with skills to coordinate evacuations, liaise with emergency services, and maintain fire safety records.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-search"></i></div>
+                <span class="svc-course__badge svc-course__badge--adv">Advanced</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 3 Days</div>
+                <h3 class="svc-course__title ff-secondary">Fire Risk Assessment</h3>
+                <p class="svc-course__desc ff-secondary">Develop the competence to carry out, review, and document comprehensive fire risk assessments in line with regulatory standards.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
             </div>
-            <div class="process__connector"></div>
           </div>
 
-          <!-- Step 4 -->
-          <div class="process__step">
-            <div class="process__number">04</div>
-            <div class="process__content">
-              <div class="process__icon">
-                <i class="fas fa-clipboard-check"></i>
-              </div>
-              <h3 class="process__title">Internal Audit</h3>
-              <p class="process__desc">Thorough internal audits to ensure compliance and readiness</p>
+          <!-- Rescue Panel -->
+          <div class="svc-tabs__panel" id="tab-rescue">
+            <div class="svc-courses">
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-hard-hat"></i></div>
+                <span class="svc-course__badge svc-course__badge--mid">Intermediate</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 3 Days</div>
+                <h3 class="svc-course__title ff-secondary">Working at Height &amp; Rescue</h3>
+                <p class="svc-course__desc ff-secondary">Safety techniques, fall-protection systems, and rescue procedures for personnel working in elevated environments.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-wind"></i></div>
+                <span class="svc-course__badge svc-course__badge--adv">Advanced</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 4 Days</div>
+                <h3 class="svc-course__title ff-secondary">Confined Space Entry &amp; Rescue</h3>
+                <p class="svc-course__desc ff-secondary">Covers hazard identification, atmospheric testing, entry permits, and safe rescue operations in confined spaces.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-ambulance"></i></div>
+                <span class="svc-course__badge svc-course__badge--adv">Advanced</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 3 Days</div>
+                <h3 class="svc-course__title ff-secondary">Emergency Response</h3>
+                <p class="svc-course__desc ff-secondary">Prepares teams to plan, implement, and manage structured emergency response operations across a range of industrial scenarios.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
             </div>
-            <div class="process__connector"></div>
           </div>
 
-          <!-- Step 5 -->
-          <div class="process__step">
-            <div class="process__number">05</div>
-            <div class="process__content">
-              <div class="process__icon">
-                <i class="fas fa-certificate"></i>
-              </div>
-              <h3 class="process__title">Certification</h3>
-              <p class="process__desc">Expert support through external audits to achieve certification</p>
+          <!-- ISO Trainings Panel -->
+          <div class="svc-tabs__panel" id="tab-iso">
+            <div class="svc-courses">
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-certificate"></i></div>
+                <span class="svc-course__badge svc-course__badge--pro">Professional</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 5 Days</div>
+                <h3 class="svc-course__title ff-secondary">ISO 45001 Lead Auditor</h3>
+                <p class="svc-course__desc ff-secondary">Gain the skills to plan, conduct, and lead second- and third-party audits of Occupational Health &amp; Safety management systems.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-leaf"></i></div>
+                <span class="svc-course__badge svc-course__badge--pro">Professional</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 5 Days</div>
+                <h3 class="svc-course__title ff-secondary">ISO 14001 Internal Auditor</h3>
+                <p class="svc-course__desc ff-secondary">Develop competence to conduct internal environmental management system audits to ISO 14001:2015 requirements.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-star"></i></div>
+                <span class="svc-course__badge svc-course__badge--pro">Professional</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 5 Days</div>
+                <h3 class="svc-course__title ff-secondary">ISO 9001 Lead Auditor</h3>
+                <p class="svc-course__desc ff-secondary">Master the principles and processes required to plan and perform quality management system audits to ISO 9001:2015.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
             </div>
+          </div>
+
+          <!-- Other Panel -->
+          <div class="svc-tabs__panel" id="tab-other">
+            <div class="svc-courses">
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-boxes"></i></div>
+                <span class="svc-course__badge">Foundation</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 1 Day</div>
+                <h3 class="svc-course__title ff-secondary">Manual Handling</h3>
+                <p class="svc-course__desc ff-secondary">Correct techniques for lifting, carrying, and moving loads safely to prevent musculoskeletal injuries in the workplace.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-search-plus"></i></div>
+                <span class="svc-course__badge svc-course__badge--mid">Intermediate</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 2 Days</div>
+                <h3 class="svc-course__title ff-secondary">Incident Investigation</h3>
+                <p class="svc-course__desc ff-secondary">Structured methodologies to investigate workplace incidents, identify root causes, and implement corrective actions effectively.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
+              <article class="svc-course">
+                <div class="svc-course__icon"><i class="fas fa-clipboard-list"></i></div>
+                <span class="svc-course__badge svc-course__badge--mid">Intermediate</span>
+                <div class="svc-course__meta"><i class="fas fa-clock"></i> 3 Days</div>
+                <h3 class="svc-course__title ff-secondary">HSEQ Management</h3>
+                <p class="svc-course__desc ff-secondary">An integrated overview of Health, Safety, Environment, and Quality management systems for supervisors and managers.</p>
+                <a href="#" class="svc-course__cta openModal" data-modal="modal-course">Enrol Now</a>
+              </article>
+            </div>
+          </div>
+        </div><!-- /.svc-tabs -->
+      </div><!-- /.svc-section__inner -->
+    </section>
+
+    <!-- ===================== CONSULTANCY SECTION ===================== -->
+    <section class="svc-section svc-section--navy" id="consultancy">
+      <div class="svc-section__inner">
+        <div class="svc-section__header">
+          <span class="svc-section__eyebrow">02 / Consultancy</span>
+          <h2 class="svc-section__title">ISO Certification Journey</h2>
+          <p class="svc-section__sub">We guide you through every step — from initial assessment to achieving and maintaining internationally recognised ISO certification.</p>
+        </div>
+
+        <!-- ISO Pathway -->
+        <div class="svc-pathway">
+          <div class="svc-pathway__step">
+            <div class="svc-pathway__icon-wrap">
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="svc-pathway__connector" aria-hidden="true"></div>
+            <h3 class="svc-pathway__title ff-secondary">Gap Analysis</h3>
+            <p class="svc-pathway__desc ff-secondary">Comprehensive assessment of your current systems against ISO requirements to identify areas for improvement.</p>
+          </div>
+          <div class="svc-pathway__step">
+            <div class="svc-pathway__icon-wrap">
+              <i class="fas fa-drafting-compass"></i>
+            </div>
+            <div class="svc-pathway__connector" aria-hidden="true"></div>
+            <h3 class="svc-pathway__title ff-secondary">System Development</h3>
+            <p class="svc-pathway__desc ff-secondary">Design and develop customised management systems tailored to your organisation's operations and objectives.</p>
+          </div>
+          <div class="svc-pathway__step">
+            <div class="svc-pathway__icon-wrap">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="svc-pathway__connector" aria-hidden="true"></div>
+            <h3 class="svc-pathway__title ff-secondary">Implementation</h3>
+            <p class="svc-pathway__desc ff-secondary">Seamless integration and deployment of your management system across all operational levels.</p>
+          </div>
+          <div class="svc-pathway__step">
+            <div class="svc-pathway__icon-wrap">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <div class="svc-pathway__connector" aria-hidden="true"></div>
+            <h3 class="svc-pathway__title ff-secondary">Internal Audit</h3>
+            <p class="svc-pathway__desc ff-secondary">Thorough internal audits to verify compliance and confirm readiness for the external certification audit.</p>
+          </div>
+          <div class="svc-pathway__step svc-pathway__step--final">
+            <div class="svc-pathway__icon-wrap">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h3 class="svc-pathway__title ff-secondary">Certification</h3>
+            <p class="svc-pathway__desc ff-secondary">Expert support throughout the external certification body audit to achieve your ISO certification.</p>
+          </div>
+        </div><!-- /.svc-pathway -->
+
+        <!-- ISO Standards Grid -->
+        <div class="svc-iso">
+          <h3 class="svc-iso__heading ff-secondary">ISO Standards on Offer</h3>
+          <div class="svc-iso__grid">
+            <div class="svc-iso__card">
+              <span class="svc-iso__num ff-secondary">9001</span>
+              <h4 class="svc-iso__title ff-secondary">Quality Management</h4>
+              <p class="svc-iso__desc ff-secondary">Enhance customer satisfaction and operational efficiency through a robust quality management framework.</p>
+              <a href="contact.html" class="svc-iso__link ff-secondary">Get Certified <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="svc-iso__card">
+              <span class="svc-iso__num ff-secondary">14001</span>
+              <h4 class="svc-iso__title ff-secondary">Environmental Management</h4>
+              <p class="svc-iso__desc ff-secondary">Demonstrate environmental responsibility and achieve sustainable, compliant operations across your business.</p>
+              <a href="contact.html" class="svc-iso__link ff-secondary">Get Certified <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="svc-iso__card">
+              <span class="svc-iso__num ff-secondary">45001</span>
+              <h4 class="svc-iso__title ff-secondary">Occupational H&amp;S</h4>
+              <p class="svc-iso__desc ff-secondary">Protect your workforce and reduce occupational risk through the world's leading OH&amp;S management standard.</p>
+              <a href="contact.html" class="svc-iso__link ff-secondary">Get Certified <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="svc-iso__card">
+              <span class="svc-iso__num ff-secondary">22001</span>
+              <h4 class="svc-iso__title ff-secondary">Food Safety Management</h4>
+              <p class="svc-iso__desc ff-secondary">Implement internationally recognised food safety systems covering HACCP principles across the entire food supply chain.</p>
+              <a href="contact.html" class="svc-iso__link ff-secondary">Get Certified <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="svc-iso__card">
+              <span class="svc-iso__num ff-secondary">17025</span>
+              <h4 class="svc-iso__title ff-secondary">Testing &amp; Calibration Labs</h4>
+              <p class="svc-iso__desc ff-secondary">Achieve international recognition for your laboratory's technical competence, impartiality, and consistent operation.</p>
+              <a href="contact.html" class="svc-iso__link ff-secondary">Get Certified <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="svc-iso__card svc-iso__card--general">
+              <span class="svc-iso__num ff-secondary"><i class="fas fa-building"></i></span>
+              <h4 class="svc-iso__title ff-secondary">General Consultancy</h4>
+              <p class="svc-iso__desc ff-secondary">Bespoke HSEQ management system development, policy writing, risk assessments, and regulatory compliance support tailored to your industry.</p>
+              <a href="contact.html" class="svc-iso__link ff-secondary">Enquire Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div><!-- /.svc-iso -->
+      </div><!-- /.svc-section__inner -->
+    </section>
+
+    <!-- ===================== TECHNOLOGY SECTION ===================== -->
+    <section class="svc-section svc-section--light" id="technology">
+      <div class="svc-section__inner">
+        <div class="svc-section__header">
+          <span class="svc-section__eyebrow">03 / Technology</span>
+          <h2 class="svc-section__title">HSSE Management Software</h2>
+          <p class="svc-section__sub">One platform. Every aspect of your HSSE programme — visible, automated, and in control.</p>
+        </div>
+
+        <!-- Platform Split -->
+        <div class="svc-platform">
+          <div class="svc-platform__visual">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=80" alt="HSSE Management Dashboard" class="svc-platform__img" loading="lazy">
+            <div class="svc-platform__badge ff-secondary"><i class="fas fa-circle" style="color:#22c55e;font-size:0.6rem;"></i> Live Dashboard</div>
+          </div>
+          <div class="svc-platform__content">
+            <h3 class="svc-platform__heading ff-secondary">Built for HSSE. Used every day.</h3>
+            <p class="svc-platform__text ff-secondary">From your first incident report to your next certification audit, our platform keeps every team, every site, and every obligation in sync.</p>
+            <ul class="svc-platform__list">
+              <li class="ff-secondary"><i class="fas fa-check-circle"></i> Real-time analytics &amp; alerts</li>
+              <li class="ff-secondary"><i class="fas fa-check-circle"></i> Mobile-first incident reporting</li>
+              <li class="ff-secondary"><i class="fas fa-check-circle"></i> Automated compliance tracking</li>
+              <li class="ff-secondary"><i class="fas fa-check-circle"></i> Digital permit-to-work</li>
+              <li class="ff-secondary"><i class="fas fa-check-circle"></i> Audit management &amp; close-out</li>
+              <li class="ff-secondary"><i class="fas fa-check-circle"></i> Version-controlled document library</li>
+            </ul>
+            <a href="#" class="svc-platform__cta ff-secondary openModal" data-modal="modal-quote">Request a Demo <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
-    
-        <!-- Part 2: ISO Standards on Offer -->
-        <div class="consultancy__iso">
-          <h2 class="consultancy__iso-heading">ISO Standards on Offer</h2>
-          <p class="consultancy__iso-subtext">
-            Our consultancy services include a range of internationally recognized ISO standards:
-          </p>
-          <ul class="consultancy__iso-list">
-            <li class="consultancy__iso-item">
-              <i class="fas fa-certificate"></i>
-              <span class="consultancy__iso-title">ISO 9001</span>
-              <p class="consultancy__iso-desc">
-                Quality Management Systems for enhanced customer satisfaction.
-              </p>
-            </li>
-            <li class="consultancy__iso-item">
-              <i class="fas fa-certificate"></i>
-              <span class="consultancy__iso-title">ISO 14001</span>
-              <p class="consultancy__iso-desc">
-                Environmental Management Systems for sustainable operations.
-              </p>
-            </li>
-            <li class="consultancy__iso-item">
-              <i class="fas fa-certificate"></i>
-              <span class="consultancy__iso-title">ISO 45001</span>
-              <p class="consultancy__iso-desc">
-                Occupational Health and Safety Management for a safer workplace.
-              </p>
-            </li>
-            <li class="consultancy__iso-item">
-              <i class="fas fa-certificate"></i>
-              <span class="consultancy__iso-title">ISO 27001</span>
-              <p class="consultancy__iso-desc">
-                Information Security Management for robust data protection.
-              </p>
-            </li>
-          </ul>
+
+        <!-- Compact Module Grid -->
+        <div class="svc-tech__grid svc-tech__grid--compact">
+          <div class="svc-tech__module">
+            <div class="svc-tech__mod-icon"><i class="fas fa-chart-line"></i></div>
+            <h3 class="svc-tech__mod-title ff-secondary">Analytics</h3>
+          </div>
+          <div class="svc-tech__module">
+            <div class="svc-tech__mod-icon"><i class="fas fa-exclamation-triangle"></i></div>
+            <h3 class="svc-tech__mod-title ff-secondary">Incident Reporting</h3>
+          </div>
+          <div class="svc-tech__module">
+            <div class="svc-tech__mod-icon"><i class="fas fa-tasks"></i></div>
+            <h3 class="svc-tech__mod-title ff-secondary">Compliance</h3>
+          </div>
+          <div class="svc-tech__module">
+            <div class="svc-tech__mod-icon"><i class="fas fa-clipboard-list"></i></div>
+            <h3 class="svc-tech__mod-title ff-secondary">Audits</h3>
+          </div>
+          <div class="svc-tech__module">
+            <div class="svc-tech__mod-icon"><i class="fas fa-hard-hat"></i></div>
+            <h3 class="svc-tech__mod-title ff-secondary">PPE Management</h3>
+          </div>
+          <div class="svc-tech__module">
+            <div class="svc-tech__mod-icon"><i class="fas fa-file-signature"></i></div>
+            <h3 class="svc-tech__mod-title ff-secondary">Permit to Work</h3>
+          </div>
+          <div class="svc-tech__module">
+            <div class="svc-tech__mod-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <h3 class="svc-tech__mod-title ff-secondary">Performance KPIs</h3>
+          </div>
+          <div class="svc-tech__module">
+            <div class="svc-tech__mod-icon"><i class="fas fa-folder-open"></i></div>
+            <h3 class="svc-tech__mod-title ff-secondary">Documents</h3>
+          </div>
+        </div><!-- /.svc-tech__grid -->
+      </div><!-- /.svc-section__inner -->
+    </section>
+
+    <!-- ===================== SUPPLY SECTION ===================== -->
+    <section class="svc-section svc-section--offwhite" id="supply">
+      <div class="svc-section__inner">
+        <div class="svc-section__header">
+          <span class="svc-section__eyebrow">04 / Supply</span>
+          <h2 class="svc-section__title">Safety Equipment &amp; PPE Supply</h2>
+          <p class="svc-section__sub">We source, verify, and deliver high-quality personal protective equipment and safety gear — ensuring your workforce meets compliance requirements every day.</p>
+        </div>
+
+        <!-- Supply Grid -->
+        <div class="svc-supply__grid">
+          <div class="svc-supply__card">
+            <div class="svc-supply__icon-wrap"><i class="fas fa-hard-hat"></i></div>
+            <h3 class="svc-supply__card-title ff-secondary">Personal Protective Equipment</h3>
+            <ul class="svc-supply__list ff-secondary">
+              <li>Safety helmets and hard hats</li>
+              <li>Safety boots and protective footwear</li>
+              <li>High-visibility vests and coveralls</li>
+              <li>Cut-resistant and chemical-resistant gloves</li>
+            </ul>
+          </div>
+          <div class="svc-supply__card">
+            <div class="svc-supply__icon-wrap"><i class="fas fa-lungs"></i></div>
+            <h3 class="svc-supply__card-title ff-secondary">Respiratory Protection</h3>
+            <ul class="svc-supply__list ff-secondary">
+              <li>Disposable and reusable face masks</li>
+              <li>Half-face and full-face respirators</li>
+              <li>Self-contained breathing apparatus</li>
+              <li>Replacement cartridges and filters</li>
+            </ul>
+          </div>
+          <div class="svc-supply__card">
+            <div class="svc-supply__icon-wrap"><i class="fas fa-eye"></i></div>
+            <h3 class="svc-supply__card-title ff-secondary">Eye &amp; Face Protection</h3>
+            <ul class="svc-supply__list ff-secondary">
+              <li>Safety goggles and spectacles</li>
+              <li>Full-face shields and visors</li>
+              <li>Welding helmets and auto-darkening filters</li>
+              <li>Anti-fog and anti-scratch protective eyewear</li>
+            </ul>
+          </div>
+          <div class="svc-supply__card">
+            <div class="svc-supply__icon-wrap"><i class="fas fa-fire-extinguisher"></i></div>
+            <h3 class="svc-supply__card-title ff-secondary">Fire Safety Equipment</h3>
+            <ul class="svc-supply__list ff-secondary">
+              <li>Portable and wheeled fire extinguishers</li>
+              <li>Fire blankets and suppression agents</li>
+              <li>Smoke and heat detectors</li>
+              <li>Emergency lighting and exit signs</li>
+            </ul>
+          </div>
+          <div class="svc-supply__card">
+            <div class="svc-supply__icon-wrap"><i class="fas fa-exclamation-triangle"></i></div>
+            <h3 class="svc-supply__card-title ff-secondary">Safety Signage</h3>
+            <ul class="svc-supply__list ff-secondary">
+              <li>Mandatory and prohibition signs</li>
+              <li>Warning and hazard identification signs</li>
+              <li>Emergency exit and assembly point signs</li>
+              <li>Custom facility safety posters</li>
+            </ul>
+          </div>
+          <div class="svc-supply__card">
+            <div class="svc-supply__icon-wrap"><i class="fas fa-briefcase-medical"></i></div>
+            <h3 class="svc-supply__card-title ff-secondary">First Aid Supplies</h3>
+            <ul class="svc-supply__list ff-secondary">
+              <li>Workplace and travel first aid kits</li>
+              <li>Wound care and dressing materials</li>
+              <li>AED defibrillators and accessories</li>
+              <li>Eye-wash stations and spill kits</li>
+            </ul>
+          </div>
+        </div><!-- /.svc-supply__grid -->
+
+        <!-- Supply CTA Bar -->
+        <div class="svc-supply__cta">
+          <div class="svc-supply__cta-text">
+            <h3 class="ff-secondary">Need a custom procurement package?</h3>
+            <p class="ff-secondary">Tell us your requirements and we will put together a tailored supply solution.</p>
+          </div>
+          <a href="#" class="svc-supply__cta-btn ff-secondary openModal" data-modal="modal-quote">Request a Quote</a>
+        </div>
+      </div><!-- /.svc-section__inner -->
+    </section>
+
+    <!-- ===================== ENVIRONMENTAL & LABORATORY SECTION ===================== -->
+    <section class="svc-section svc-section--offwhite" id="environmental">
+      <div class="svc-section__inner">
+        <div class="svc-section__header">
+          <span class="svc-section__eyebrow">05 / Environmental &amp; Laboratory</span>
+          <h2 class="svc-section__title">Environmental &amp; Laboratory Services</h2>
+          <p class="svc-section__sub">Science-backed environmental testing, impact assessments, and laboratory consultancy — the evidence your organisation needs to operate sustainably.</p>
+        </div>
+
+        <!-- Image + Feature Split -->
+        <div class="svc-env__intro">
+          <div class="svc-env__intro-img">
+            <img src="https://images.unsplash.com/photo-1532094349884-543559338b14?w=900&auto=format&fit=crop&q=80" alt="Environmental Laboratory" loading="lazy">
+          </div>
+          <div class="svc-env__intro-text">
+            <h3 class="ff-secondary">From field sampling to lab accreditation</h3>
+            <p class="ff-secondary">We provide end-to-end environmental and laboratory services — from air and water sampling through to ISO 17025 lab setup — giving you the data and compliance documentation to protect your licence to operate.</p>
+            <a href="#" class="svc-env__intro-cta ff-secondary openModal" data-modal="modal-quote">Discuss Your Needs <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Cards -->
+        <div class="svc-env__grid">
+          <div class="svc-env__card">
+            <div class="svc-env__icon"><i class="fas fa-vial"></i></div>
+            <h3 class="svc-env__title ff-secondary">Environmental Sampling &amp; Testing</h3>
+            <p class="svc-env__desc ff-secondary">Air, water, soil, and noise sampling using internationally recognised methods.</p>
+          </div>
+          <div class="svc-env__card">
+            <div class="svc-env__icon"><i class="fas fa-file-alt"></i></div>
+            <h3 class="svc-env__title ff-secondary">Environmental Impact Assessment</h3>
+            <p class="svc-env__desc ff-secondary">EIAs that meet regulatory requirements and demonstrate environmental responsibility.</p>
+          </div>
+          <div class="svc-env__card">
+            <div class="svc-env__icon"><i class="fas fa-recycle"></i></div>
+            <h3 class="svc-env__title ff-secondary">Waste Management</h3>
+            <p class="svc-env__desc ff-secondary">Compliant characterisation, segregation, and disposal plans for hazardous and industrial waste.</p>
+          </div>
+          <div class="svc-env__card">
+            <div class="svc-env__icon"><i class="fas fa-flask"></i></div>
+            <h3 class="svc-env__title ff-secondary">Laboratory Setup &amp; ISO 17025</h3>
+            <p class="svc-env__desc ff-secondary">End-to-end support for establishing and accrediting in-house laboratories.</p>
+          </div>
+          <div class="svc-env__card">
+            <div class="svc-env__icon"><i class="fas fa-leaf"></i></div>
+            <h3 class="svc-env__title ff-secondary">Ecological Surveys</h3>
+            <p class="svc-env__desc ff-secondary">Flora, fauna, and habitat assessments for development and industrial permitting.</p>
+          </div>
+          <div class="svc-env__card">
+            <div class="svc-env__icon"><i class="fas fa-tint"></i></div>
+            <h3 class="svc-env__title ff-secondary">Water Quality Management</h3>
+            <p class="svc-env__desc ff-secondary">Monitoring and remediation advisory for effluent and groundwater programmes.</p>
+          </div>
+        </div><!-- /.svc-env__grid -->
+      </div><!-- /.svc-section__inner -->
+    </section>
+
+    <!-- ===================== CTA BAND ===================== -->
+    <section class="svc-cta-band">
+      <div class="svc-cta-band__inner">
+        <div class="svc-cta-band__text">
+          <h2 class="svc-cta-band__title ff-secondary">Not sure where to start?</h2>
+          <p class="svc-cta-band__sub ff-secondary">Our team is ready to help you find the right combination of training, consultancy, technology, supply, and environmental solutions for your organisation.</p>
+        </div>
+        <div class="svc-cta-band__actions">
+          <a href="contact.html" class="svc-cta-band__btn svc-cta-band__btn--primary ff-secondary">Talk to Us</a>
+          <a href="#" class="svc-cta-band__btn svc-cta-band__btn--ghost ff-secondary openModal" data-modal="modal-quote">Get a Quote</a>
         </div>
       </div>
     </section>
-    
-    <!-- Technology Section -->
-    <section class="service__technology ff-secondary" id="technology">
-      <div class="container">
-        <div class="technology__showcase">
-          <!-- Header -->
-          <div class="technology__header">
-            <h2 class="technology__heading">Comprehensive HSSE Management Software</h2>
-            <p class="technology__description">
-              Our all-in-one HSSE system provides end-to-end management of Health, Safety, Security, 
-              Environment, and Quality processes. From incident reporting to compliance tracking, 
-              manage everything from a single, powerful platform.
-            </p>
-          </div>
 
-          <!-- Dashboard Preview -->
-          <div class="technology__dashboard">
-            <div class="dashboard__mockup">
-              <!-- TO ADD DASHBOARD IMAGE: Replace dashboard__placeholder div with:
-                   <img loading="lazy" src="images/your-dashboard.jpg" alt="HSSE Dashboard" style="width: 100%; border-radius: 10px; margin-top: 40px;">
-              -->
-              <div class="dashboard__placeholder">
-                <i class="fas fa-chart-line dashboard__icon"></i>
-                <p class="dashboard__text">Dashboard Preview Coming Soon</p>
-                <div class="dashboard__features">
-                  <div class="dashboard__feature">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Real-time Analytics</span>
-                  </div>
-                  <div class="dashboard__feature">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Incident Reporting</span>
-                  </div>
-                  <div class="dashboard__feature">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Compliance Tracking</span>
-                  </div>
-                  <div class="dashboard__feature">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Audit Management</span>
-                  </div>
-                  <div class="dashboard__feature">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Performance Monitoring</span>
-                  </div>
-                  <div class="dashboard__feature">
-                    <i class="fas fa-check-circle"></i>
-                    <span>PPE Management</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Call to Action -->
-          <div class="technology__cta">
-            <h3 class="technology__cta-title">Ready to transform your HSSE management?</h3>
-            <a href="#" class="technology__cta-button openModal" data-modal="modal-quote">Request a Demo</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Supply Section -->
-    <section class="service__supply ff-secondary" id="supply">
-      <div class="container">
-        <div class="supply__header">
-          <h2 class="supply__heading">Safety Equipment & PPE Supply</h2>
-          <p class="supply__subtext">
-            We provide high-quality personal protective equipment and safety gear to ensure workplace safety and compliance.
-          </p>
-        </div>
-        
-        <div class="supply__grid">
-          <!-- PPE Category 1 -->
-          <div class="supply__item">
-            <div class="supply__icon">🦺</div>
-            <h3 class="supply__item-title">Personal Protective Equipment</h3>
-            <ul class="supply__list">
-              <li>Safety Helmets & Hard Hats</li>
-              <li>Safety Boots & Shoes</li>
-              <li>High Visibility Vests</li>
-              <li>Safety Gloves</li>
-            </ul>
-          </div>
-
-          <!-- PPE Category 2 -->
-          <div class="supply__item">
-            <div class="supply__icon">😷</div>
-            <h3 class="supply__item-title">Respiratory Protection</h3>
-            <ul class="supply__list">
-              <li>Face Masks & Respirators</li>
-              <li>Gas Masks</li>
-              <li>Dust Masks</li>
-              <li>Air Filters</li>
-            </ul>
-          </div>
-
-          <!-- PPE Category 3 -->
-          <div class="supply__item">
-            <div class="supply__icon">🥽</div>
-            <h3 class="supply__item-title">Eye & Face Protection</h3>
-            <ul class="supply__list">
-              <li>Safety Goggles</li>
-              <li>Face Shields</li>
-              <li>Welding Helmets</li>
-              <li>Protective Eyewear</li>
-            </ul>
-          </div>
-
-          <!-- PPE Category 4 -->
-          <div class="supply__item">
-            <div class="supply__icon">🔥</div>
-            <h3 class="supply__item-title">Fire Safety Equipment</h3>
-            <ul class="supply__list">
-              <li>Fire Extinguishers</li>
-              <li>Fire Blankets</li>
-              <li>Smoke Detectors</li>
-              <li>Emergency Lighting</li>
-            </ul>
-          </div>
-
-          <!-- PPE Category 5 -->
-          <div class="supply__item">
-            <div class="supply__icon">⚠️</div>
-            <h3 class="supply__item-title">Safety Signage</h3>
-            <ul class="supply__list">
-              <li>Warning Signs</li>
-              <li>Mandatory Signs</li>
-              <li>Emergency Exit Signs</li>
-              <li>Safety Posters</li>
-            </ul>
-          </div>
-
-          <!-- PPE Category 6 -->
-          <div class="supply__item">
-            <div class="supply__icon">🩹</div>
-            <h3 class="supply__item-title">First Aid Supplies</h3>
-            <ul class="supply__list">
-              <li>First Aid Kits</li>
-              <li>Medical Supplies</li>
-              <li>Emergency Equipment</li>
-              <li>Safety Stations</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="supply__cta">
-          <p class="supply__cta-text">Need custom safety solutions? We've got you covered!</p>
-          <a href="#" class="supply__cta-button openModal" data-modal="modal-quote">Request a Quote</a>
-        </div>
-      </div>
-    </section>
   </main>
-    <footer class="footer">
+
+  <footer class="footer">
     <div class="footer__container">
       <div class="footer__top">
         <div class="footer__column footer__column--brand">
@@ -456,6 +647,7 @@
             <li class="footer__list-item"><a href="services.html#consultancy">Consultancy</a></li>
             <li class="footer__list-item"><a href="services.html#technology">Technology</a></li>
             <li class="footer__list-item"><a href="services.html#supply">Supply</a></li>
+            <li class="footer__list-item"><a href="services.html#environmental">Environmental &amp; Lab</a></li>
           </ul>
         </div>
         <div class="footer__column">
@@ -501,7 +693,25 @@
       </div>
     </div>
   </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="src/stats.js"></script>
-</body></html>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var btns = document.querySelectorAll('.svc-tabs__btn');
+    var panels = document.querySelectorAll('.svc-tabs__panel');
+    if (!btns.length) return;
+    btns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        btns.forEach(function(b) { b.classList.remove('active'); });
+        panels.forEach(function(p) { p.classList.remove('active'); });
+        btn.classList.add('active');
+        var t = document.getElementById(btn.getAttribute('data-tab'));
+        if (t) t.classList.add('active');
+      });
+    });
+  });
+  </script>
+</body>
+</html>

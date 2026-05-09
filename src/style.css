@@ -7296,3 +7296,1185 @@ html {
     display: none;
   }
 }
+
+
+/* ==========================================================================
+   SERVICES PAGE — svc- components
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   svc-section — shared section wrapper
+   -------------------------------------------------------------------------- */
+.svc-section {
+  padding: 96px 0;
+}
+.svc-section--light {
+  background: #ffffff;
+}
+.svc-section--offwhite {
+  background: #f5f7fa;
+}
+.svc-section--navy {
+  background: #0d1b3e;
+}
+.svc-section__inner {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+.svc-section__header {
+  max-width: 640px;
+  margin-bottom: 64px;
+}
+.svc-section__eyebrow {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--clr-accent-400);
+  font-family: var(--ff-secondary);
+  margin-bottom: 14px;
+}
+.svc-section__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #0d1b3e;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  font-family: var(--ff-secondary);
+}
+.svc-section__sub {
+  font-size: 1rem;
+  color: rgba(13, 27, 62, 0.58);
+  line-height: 1.75;
+  font-family: var(--ff-secondary);
+}
+
+/* Navy section text overrides */
+.svc-section--navy .svc-section__title {
+  color: #ffffff;
+}
+.svc-section--navy .svc-section__sub {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+/* --------------------------------------------------------------------------
+   svc-nav — sticky service navigation strip
+   -------------------------------------------------------------------------- */
+.svc-nav {
+  position: sticky;
+  top: 74px;
+  z-index: 90;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(13, 27, 62, 0.1);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.svc-nav::-webkit-scrollbar {
+  display: none;
+}
+.svc-nav__inner {
+  display: flex;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+.svc-nav__tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 28px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-family: var(--ff-secondary);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(13, 27, 62, 0.55);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.22s ease, border-color 0.22s ease;
+}
+.svc-nav__tab i {
+  font-size: 0.78rem;
+  color: var(--clr-accent-400);
+  transition: transform 0.22s ease;
+}
+.svc-nav__tab:hover {
+  color: #0d1b3e;
+  border-bottom-color: var(--clr-accent-400);
+}
+.svc-nav__tab:hover i {
+  transform: scale(1.15);
+}
+
+/* --------------------------------------------------------------------------
+   svc-tabs — training tab bar and panels
+   -------------------------------------------------------------------------- */
+.svc-tabs {
+  width: 100%;
+}
+.svc-tabs__bar {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid rgba(13, 27, 62, 0.1);
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-bottom: 48px;
+}
+.svc-tabs__bar::-webkit-scrollbar {
+  display: none;
+}
+.svc-tabs__btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 14px 24px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-size: 0.85rem;
+  font-family: var(--ff-secondary);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(13, 27, 62, 0.5);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  margin-bottom: -1px;
+}
+.svc-tabs__btn i {
+  font-size: 0.8rem;
+}
+.svc-tabs__btn:hover {
+  color: #0d1b3e;
+}
+.svc-tabs__btn.active {
+  color: #0d1b3e;
+  border-bottom-color: var(--clr-accent-400);
+}
+.svc-tabs__panel {
+  display: none;
+}
+.svc-tabs__panel.active {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   svc-courses — course card grid
+   -------------------------------------------------------------------------- */
+.svc-courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.svc-course {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(13, 27, 62, 0.1);
+  border-radius: 12px;
+  padding: 28px;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+.svc-course:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(13, 27, 62, 0.1);
+}
+.svc-course__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(13, 27, 62, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d1b3e;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  transition: background 0.22s ease, color 0.22s ease;
+  flex-shrink: 0;
+}
+.svc-course:hover .svc-course__icon {
+  background: var(--clr-accent-400);
+  color: #0d1b3e;
+}
+.svc-course__badge {
+  display: inline-block;
+  background: var(--clr-accent-400);
+  color: #0d1b3e;
+  font-size: 0.62rem;
+  font-weight: 700;
+  font-family: var(--ff-secondary);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+.svc-course__badge--mid {
+  background: rgba(13, 27, 62, 0.08);
+  color: #0d1b3e;
+}
+.svc-course__badge--adv {
+  background: #0d1b3e;
+  color: #ffffff;
+}
+.svc-course__badge--pro {
+  background: linear-gradient(135deg, #0d1b3e, #1e3a6e);
+  color: var(--clr-accent-400);
+}
+.svc-course__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: rgba(13, 27, 62, 0.45);
+  font-family: var(--ff-secondary);
+  margin-bottom: 10px;
+}
+.svc-course__meta i {
+  font-size: 0.72rem;
+}
+.svc-course__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0d1b3e;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+.svc-course__desc {
+  font-size: 0.88rem;
+  color: rgba(13, 27, 62, 0.55);
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 20px;
+}
+.svc-course__cta {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-family: var(--ff-secondary);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #0d1b3e;
+  text-decoration: none;
+  border-bottom: 2px solid var(--clr-accent-400);
+  padding-bottom: 2px;
+  align-self: flex-start;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.svc-course__cta:hover {
+  color: var(--clr-accent-400);
+  border-bottom-color: var(--clr-accent-400);
+}
+
+/* --------------------------------------------------------------------------
+   svc-pathway — consultancy ISO journey steps
+   -------------------------------------------------------------------------- */
+.svc-pathway {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-bottom: 80px;
+  position: relative;
+}
+.svc-pathway__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+.svc-pathway__icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--clr-accent-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-accent-400);
+  font-size: 1.3rem;
+  background: transparent;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  transition: background 0.22s ease, color 0.22s ease;
+}
+.svc-pathway__step:hover .svc-pathway__icon-wrap {
+  background: var(--clr-accent-400);
+  color: #0d1b3e;
+}
+.svc-pathway__step--final .svc-pathway__icon-wrap {
+  background: var(--clr-accent-400);
+  color: #0d1b3e;
+}
+.svc-pathway__connector {
+  position: absolute;
+  top: 32px;
+  left: calc(50% + 32px);
+  right: calc(-50% + 32px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--clr-accent-400), rgba(255, 216, 8, 0.3));
+  z-index: 0;
+  width: calc(100% - 64px);
+}
+.svc-pathway__title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.svc-pathway__desc {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+  max-width: 160px;
+}
+
+/* --------------------------------------------------------------------------
+   svc-iso — ISO standards grid (inside navy section)
+   -------------------------------------------------------------------------- */
+.svc-iso__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  position: relative;
+  display: inline-block;
+}
+.svc-iso__heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 48px;
+  height: 3px;
+  background: var(--clr-accent-400);
+  border-radius: 2px;
+}
+.svc-iso__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.svc-iso__card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background 0.22s ease;
+}
+.svc-iso__card:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+.svc-iso__num {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--clr-accent-400);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.svc-iso__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+.svc-iso__desc {
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.65;
+  flex: 1;
+}
+.svc-iso__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-family: var(--ff-secondary);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-accent-400);
+  text-decoration: none;
+  margin-top: 6px;
+  transition: gap 0.2s ease;
+}
+.svc-iso__link:hover {
+  gap: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   svc-tech__grid — technology module grid
+   -------------------------------------------------------------------------- */
+.svc-tech__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(13, 27, 62, 0.08);
+  border: 1px solid rgba(13, 27, 62, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+.svc-tech__module {
+  background: #ffffff;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background 0.2s ease;
+}
+.svc-tech__module:hover {
+  background: #f5f7fa;
+}
+.svc-tech__mod-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #0d1b3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.1rem;
+  transition: background 0.22s ease, color 0.22s ease;
+}
+.svc-tech__module:hover .svc-tech__mod-icon {
+  background: var(--clr-accent-400);
+  color: #0d1b3e;
+}
+.svc-tech__mod-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0d1b3e;
+  line-height: 1.3;
+}
+.svc-tech__mod-desc {
+  font-size: 0.83rem;
+  color: rgba(13, 27, 62, 0.55);
+  line-height: 1.65;
+}
+
+/* Technology CTA bar */
+.svc-tech__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: #0d1b3e;
+  border-radius: 14px;
+  padding: 36px 44px;
+}
+.svc-tech__cta-text h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.svc-tech__cta-text p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.svc-tech__cta-btn {
+  display: inline-block;
+  background: var(--clr-accent-400);
+  color: #0d1b3e;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+.svc-tech__cta-btn:hover {
+  background: #ffe033;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 216, 8, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   svc-supply__grid — supply category cards
+   -------------------------------------------------------------------------- */
+.svc-supply__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.svc-supply__card {
+  background: #ffffff;
+  border: 1px solid rgba(13, 27, 62, 0.1);
+  border-radius: 12px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: box-shadow 0.24s ease, transform 0.24s ease;
+}
+.svc-supply__card:hover {
+  box-shadow: 0 12px 40px rgba(13, 27, 62, 0.1);
+  transform: translateY(-3px);
+}
+.svc-supply__icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: #0d1b3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-accent-400);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.svc-supply__card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0d1b3e;
+  line-height: 1.3;
+}
+.svc-supply__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.svc-supply__list li {
+  font-size: 0.85rem;
+  color: rgba(13, 27, 62, 0.62);
+  line-height: 1.5;
+  padding-left: 18px;
+  position: relative;
+}
+.svc-supply__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--clr-accent-400);
+  flex-shrink: 0;
+}
+
+/* Supply CTA bar */
+.svc-supply__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: #0d1b3e;
+  border-radius: 14px;
+  padding: 36px 44px;
+}
+.svc-supply__cta-text h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.svc-supply__cta-text p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.svc-supply__cta-btn {
+  display: inline-block;
+  background: var(--clr-accent-400);
+  color: #0d1b3e;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+.svc-supply__cta-btn:hover {
+  background: #ffe033;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 216, 8, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   svc-cta-band — bottom CTA banner
+   -------------------------------------------------------------------------- */
+.svc-cta-band {
+  background: linear-gradient(135deg, #0d1b3e 0%, #162d5e 60%, #0d1b3e 100%);
+  padding: 80px 0;
+}
+.svc-cta-band__inner {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+.svc-cta-band__text {
+  max-width: 560px;
+}
+.svc-cta-band__title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.svc-cta-band__sub {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.52);
+  line-height: 1.7;
+}
+.svc-cta-band__actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.svc-cta-band__btn {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 34px;
+  border-radius: 8px;
+  transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+.svc-cta-band__btn--primary {
+  background: var(--clr-accent-400);
+  color: #0d1b3e;
+}
+.svc-cta-band__btn--primary:hover {
+  background: #ffe033;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 216, 8, 0.35);
+}
+.svc-cta-band__btn--ghost {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.svc-cta-band__btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive breakpoints
+   -------------------------------------------------------------------------- */
+
+/* --- 1024px --- */
+@media (max-width: 1024px) {
+  .svc-iso__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .svc-tech__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .svc-courses {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .svc-cta-band__inner {
+    gap: 32px;
+  }
+}
+
+/* --- 768px --- */
+@media (max-width: 768px) {
+  .svc-section {
+    padding: 64px 0;
+  }
+  .svc-section__header {
+    margin-bottom: 40px;
+  }
+
+  /* Pathway: switch to vertical timeline */
+  .svc-pathway {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 32px;
+    gap: 0;
+    border-left: 2px solid rgba(255, 216, 8, 0.3);
+    margin-bottom: 56px;
+  }
+  .svc-pathway__step {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    padding-bottom: 36px;
+    gap: 18px;
+    flex: none;
+    width: 100%;
+  }
+  .svc-pathway__icon-wrap {
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    position: relative;
+    left: -56px;
+    margin-right: -30px;
+  }
+  .svc-pathway__connector {
+    display: none;
+  }
+  .svc-pathway__title {
+    font-size: 0.95rem;
+  }
+  .svc-pathway__desc {
+    max-width: none;
+  }
+
+  /* Supply: 2 cols */
+  .svc-supply__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CTA bands: stack */
+  .svc-tech__cta,
+  .svc-supply__cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px;
+  }
+  .svc-cta-band__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  .svc-cta-band__actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .svc-cta-band__btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ISO grid: 2 cols on 768 */
+  .svc-iso__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Risk & Env: 2 cols on 768 */
+  .svc-risk__grid,
+  .svc-env__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .svc-risk__cta,
+  .svc-env__cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px;
+  }
+
+  /* Platform split: stack on 768 */
+  .svc-platform,
+  .svc-env__intro {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  /* Compact grid: 2 cols */
+  .svc-tech__grid--compact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*
+   ============================================================
+   svc-platform — Technology split layout
+   ============================================================
+*/
+.svc-platform {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-top: 56px;
+}
+.svc-platform__visual {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(13,27,62,0.14);
+}
+.svc-platform__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+.svc-platform__badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(13,27,62,0.85);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.svc-platform__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0d1b3e;
+  margin: 0 0 14px;
+}
+.svc-platform__text {
+  font-size: 0.95rem;
+  color: rgba(13,27,62,0.65);
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+.svc-platform__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.svc-platform__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: #0d1b3e;
+}
+.svc-platform__list li i {
+  color: #22c55e;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.svc-platform__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0d1b3e;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.svc-platform__cta:hover { background: var(--clr-accent-400); color: #0d1b3e; }
+
+/* Compact module grid (no descriptions) */
+.svc-tech__grid--compact {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 40px;
+  gap: 16px;
+}
+.svc-tech__grid--compact .svc-tech__module {
+  padding: 24px 20px;
+  text-align: center;
+}
+.svc-tech__grid--compact .svc-tech__mod-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+}
+.svc-tech__grid--compact .svc-tech__mod-title {
+  font-size: 0.85rem;
+}
+
+/*
+   ============================================================
+   svc-env__intro — Environmental image split
+   ============================================================
+*/
+.svc-env__intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-top: 56px;
+  margin-bottom: 48px;
+}
+.svc-env__intro-img {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 56px rgba(13,27,62,0.1);
+}
+.svc-env__intro-img img {
+  display: block;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.svc-env__intro-text h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0d1b3e;
+  margin: 0 0 14px;
+}
+.svc-env__intro-text p {
+  font-size: 0.95rem;
+  color: rgba(13,27,62,0.65);
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+.svc-env__intro-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0d1b3e;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.svc-env__intro-cta:hover { background: var(--clr-accent-400); color: #0d1b3e; }
+
+/*
+   ============================================================
+   svc-risk — Risk & Insurance grid
+   ============================================================
+*/
+.svc-risk__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.svc-risk__card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 32px 28px;
+  transition: background 0.25s, transform 0.25s;
+}
+.svc-risk__card:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-4px);
+}
+.svc-risk__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(255,216,8,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--clr-accent-400);
+  margin-bottom: 18px;
+}
+.svc-risk__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 10px;
+}
+.svc-risk__desc {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.65;
+  margin: 0;
+}
+.svc-risk__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 36px 40px;
+  margin-top: 48px;
+  gap: 24px;
+}
+.svc-risk__cta-text h3 {
+  font-size: 1.15rem;
+  color: #fff;
+  margin: 0 0 6px;
+}
+.svc-risk__cta-text p {
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+  font-size: 0.9rem;
+}
+.svc-risk__cta-btn {
+  flex-shrink: 0;
+  background: var(--clr-accent-400);
+  color: #0d1b3e;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+.svc-risk__cta-btn:hover { opacity: 0.88; }
+
+/*
+   ============================================================
+   svc-env — Environmental & Laboratory grid
+   ============================================================
+*/
+.svc-env__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.svc-env__card {
+  background: #fff;
+  border: 1px solid rgba(13,27,62,0.1);
+  border-radius: 12px;
+  padding: 32px 28px;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.svc-env__card:hover {
+  box-shadow: 0 8px 32px rgba(13,27,62,0.1);
+  transform: translateY(-4px);
+}
+.svc-env__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(13,27,62,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #0d1b3e;
+  margin-bottom: 18px;
+}
+.svc-env__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0d1b3e;
+  margin: 0 0 10px;
+}
+.svc-env__desc {
+  font-size: 0.9rem;
+  color: rgba(13,27,62,0.65);
+  line-height: 1.65;
+  margin: 0;
+}
+.svc-env__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0d1b3e;
+  border-radius: 16px;
+  padding: 36px 40px;
+  margin-top: 48px;
+  gap: 24px;
+}
+.svc-env__cta-text h3 {
+  font-size: 1.15rem;
+  color: #fff;
+  margin: 0 0 6px;
+}
+.svc-env__cta-text p {
+  color: rgba(255,255,255,0.65);
+  margin: 0;
+  font-size: 0.9rem;
+}
+.svc-env__cta-btn {
+  flex-shrink: 0;
+  background: var(--clr-accent-400);
+  color: #0d1b3e;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+.svc-env__cta-btn:hover { opacity: 0.88; }
+
+/* ISO card general variant */
+.svc-iso__card--general .svc-iso__num {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* --- 480px --- */
+@media (max-width: 480px) {
+  .svc-courses {
+    grid-template-columns: 1fr;
+  }
+  .svc-supply__grid {
+    grid-template-columns: 1fr;
+  }
+  .svc-tech__grid {
+    grid-template-columns: 1fr;
+  }
+  .svc-iso__grid {
+    grid-template-columns: 1fr;
+  }
+  .svc-risk__grid {
+    grid-template-columns: 1fr;
+  }
+  .svc-env__grid {
+    grid-template-columns: 1fr;
+  }
+  .svc-tech__grid--compact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .svc-env__intro-img img {
+    height: 240px;
+  }
+  .svc-nav__tab {
+    padding: 14px 18px;
+    font-size: 0.75rem;
+  }
+  .svc-tabs__btn {
+    padding: 12px 16px;
+    font-size: 0.78rem;
+  }
+  .svc-cta-band {
+    padding: 56px 0;
+  }
+}
+
