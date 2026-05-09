@@ -1,3 +1,15 @@
+// Scroll Progress Bar
+document.addEventListener('DOMContentLoaded', function() {
+  var bar = document.createElement('div');
+  bar.id = 'scrollProgress';
+  document.body.appendChild(bar);
+
+  window.addEventListener('scroll', function() {
+    var scrolled = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+    bar.style.width = (scrolled * 100) + '%';
+  }, { passive: true });
+});
+
 // Page Loader
 window.addEventListener('load', function() {
   const loader = document.getElementById('pageLoader');

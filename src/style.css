@@ -1193,148 +1193,250 @@ button .footer__form--button {
   box-shadow: 0 10px 30px rgba(255, 216, 8, 0.3);
 }
 
+/* ==========================================================================
+   MODAL SYSTEM — Premium redesign
+   ========================================================================== */
 .modal {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  inset: 0;
+  background: rgba(13,27,62,0.72);
   justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  backdrop-filter: blur(5px);
-  animation: fadeIn 0.3s ease-out;
+  align-items: flex-start;
+  padding: 40px 16px;
+  z-index: 10000;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  overflow-y: auto;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(-20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .modal-content {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  width: 800px;
-  max-width: 90%;
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 680px;
+  margin: auto;
   position: relative;
-  text-align: left;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  animation: slideInDown 0.4s ease-out;
+  box-shadow: 0 32px 80px rgba(13,27,62,0.3);
+  animation: modalIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+  overflow: hidden;
 }
 
-@keyframes slideInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Header */
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 28px;
+  background: #0d1b3e;
+  gap: 16px;
 }
-
-.modal-close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 35px;
-  font-weight: bold;
-  cursor: pointer;
-  color: #999;
-  transition: all 0.3s ease;
+.modal__header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.modal__header-icon {
   width: 40px;
   height: 40px;
+  background: var(--clr-accent-400);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  font-size: 0.95rem;
+  color: #0d1b3e;
+  flex-shrink: 0;
 }
-
+.modal__eyebrow {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+  margin: 0 0 2px;
+  font-family: var(--ff-secondary);
+}
+.modal__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+.modal-close {
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: rgba(255,255,255,0.55);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
 .modal-close:hover {
-  color: var(--clr-accent-400);
-  background: rgba(255, 216, 8, 0.1);
-  transform: rotate(90deg);
+  background: rgba(255,255,255,0.18);
+  color: #ffffff;
 }
 
-.modal form {
+/* Body */
+.modal__body {
+  padding: 28px 28px 32px;
+}
+
+/* Success state */
+.modal__success {
+  text-align: center;
+  padding: 40px 20px;
+}
+.modal__success i {
+  font-size: 2.8rem;
+  color: #22c55e;
+  display: block;
+  margin-bottom: 14px;
+}
+.modal__success h4 {
+  font-size: 1.2rem;
+  color: #0d1b3e;
+  margin: 0 0 8px;
+  font-family: var(--ff-secondary);
+}
+.modal__success p {
+  font-size: 0.88rem;
+  color: rgba(13,27,62,0.52);
+  font-family: var(--ff-secondary);
+}
+
+/* Form layout */
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.modal__row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 25px;
-  padding: 20px 0;
+  gap: 14px;
 }
+.modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.modal__field--full {
+  grid-column: 1 / -1;
+}
+.modal__label {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #0d1b3e;
+  letter-spacing: 0.02em;
+}
+.modal__req { color: var(--clr-accent-400); }
 
-.modal form input,
-.modal form select,
-.modal form textarea {
+.modal__input,
+.modal__select,
+.modal__textarea {
   width: 100%;
-  padding: 14px 18px;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  font-size: 1rem;
+  padding: 10px 13px;
+  border: 1.5px solid rgba(13,27,62,0.14);
+  border-radius: 8px;
+  font-size: 0.88rem;
   font-family: var(--ff-secondary);
-  transition: all 0.3s ease;
-  background: #f8f9fa;
-}
-
-.modal form input:focus,
-.modal form select:focus,
-.modal form textarea:focus {
+  color: #0d1b3e;
+  background: #f5f7fb;
+  transition: border-color 0.18s, background 0.18s, box-shadow 0.18s;
   outline: none;
-  border-color: var(--clr-accent-400);
-  background: white;
-  box-shadow: 0 0 0 3px rgba(255, 216, 8, 0.1);
+  box-sizing: border-box;
 }
-
-.modal form textarea {
-  grid-column: span 2;
-  min-height: 100px;
+.modal__input:focus,
+.modal__select:focus,
+.modal__textarea:focus {
+  border-color: #0d1b3e;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(13,27,62,0.07);
+}
+.modal__select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%230d1b3e' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+  padding-right: 34px;
+  cursor: pointer;
+}
+.modal__textarea {
+  min-height: 88px;
   resize: vertical;
 }
 
-.modal-checkbox {
-  grid-column: span 2;
-  display: inline-block;
-  align-items: start;
-}
-
-.modal button {
-  grid-column: span 1;
-  width: 50%;
-  padding: 14px 30px;
-  border: none;
-  background: linear-gradient(135deg, var(--clr-accent-400), #ffa500);
-  color: var(--clr-neutral-900);
+/* Consent */
+.modal__consent { margin-top: 2px; }
+.modal__consent-label {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
   cursor: pointer;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  font-weight: bold;
-  font-size: 1rem;
+}
+.modal__consent-label input[type="checkbox"] {
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #0d1b3e;
+  width: 15px;
+  height: 15px;
+}
+.modal__consent-label span {
+  font-size: 0.76rem;
+  color: rgba(13,27,62,0.5);
+  line-height: 1.55;
   font-family: var(--ff-secondary);
-  box-shadow: 0 5px 15px rgba(255, 216, 8, 0.3);
 }
+.modal__consent-label a { color: #0d1b3e; text-decoration: underline; }
 
-.modal button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 216, 8, 0.5);
+/* Submit */
+.modal__submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 26px;
+  background: #0d1b3e;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: var(--ff-secondary);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  align-self: flex-start;
+  margin-top: 6px;
 }
-
-.modal button:disabled {
-  background: #ccc;
+.modal__submit:hover {
+  background: var(--clr-accent-400);
+  color: #0d1b3e;
+}
+.modal__submit:disabled {
+  background: #c0c8d8;
+  color: rgba(13,27,62,0.4);
   cursor: not-allowed;
-  box-shadow: none;
 }
 
-.modal__form-title {
-  text-align: center;
-  margin: 0 0 30px 0;
-  color: var(--clr-neutral-900);
+/* Responsive */
+@media (max-width: 560px) {
+  .modal { padding: 16px; }
+  .modal__header { padding: 18px 20px; }
+  .modal__body { padding: 20px; }
+  .modal__row { grid-template-columns: 1fr; }
+  .modal__submit { width: 100%; justify-content: center; }
 }
 
 /* Carousel featured works  */
@@ -9456,5 +9558,20 @@ a.ctc-info-card:hover {
   .svc-section__inner {
     width: 92%;
   }
+}
+
+/* ==========================================================================
+   SCROLL PROGRESS BAR
+   ========================================================================== */
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--clr-accent-400);
+  z-index: 10001;
+  transition: width 0.08s linear;
+  pointer-events: none;
 }
 

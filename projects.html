@@ -48,28 +48,89 @@
     <!-- Modal -->
     <div class="modal" id="modal-course">
       <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <h3 class="modal__form-title ff-secondary fs-700 fw-bold">Book a Course</h3>
-        <form>
-          <input type="text" placeholder="First Name" required>
-          <input type="text" placeholder="Last Name" required>
-          <input type="email" placeholder="Email" required>
-          <input type="text" placeholder="Phone Number" required>
-          <input type="text" placeholder="Organisation" required>
-          <select required>
-            <option value="">Select a Course</option>
-            <optgroup label="ISO Trainings">
-              <option value="iso-45001">ISO 45001 Lead Auditor Training</option>
-            </optgroup>
-            <optgroup label="Safety Trainings">
-              <option value="fire-safety">Basic Fire Safety</option>
-              <option value="first-aid">First Aid Training</option>
-            </optgroup>
-          </select>
-          <textarea placeholder="Specifications" required></textarea>
-          <textarea placeholder="Message" required></textarea>
-          <button type="submit">Submit</button>
-        </form>
+        <div class="modal__header">
+          <div class="modal__header-left">
+            <div class="modal__header-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <p class="modal__eyebrow">HSE Masters</p>
+              <h3 class="modal__title ff-secondary">Book a Course</h3>
+            </div>
+          </div>
+          <button class="modal-close" aria-label="Close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal__body">
+          <div class="modal__success" id="courseSuccess" style="display:none">
+            <i class="fas fa-circle-check"></i>
+            <h4>Booking Request Sent!</h4>
+            <p>We'll confirm your enrolment within one business day.</p>
+          </div>
+          <form class="modal__form" name="book-course" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="book-course">
+            <p style="display:none"><input name="bot-field"></p>
+            <div class="modal__row">
+              <div class="modal__field">
+                <label class="modal__label ff-secondary" for="bc_first">First Name <span class="modal__req">*</span></label>
+                <input class="modal__input" type="text" id="bc_first" name="first_name" placeholder="e.g. Kwame" required>
+              </div>
+              <div class="modal__field">
+                <label class="modal__label ff-secondary" for="bc_last">Last Name <span class="modal__req">*</span></label>
+                <input class="modal__input" type="text" id="bc_last" name="last_name" placeholder="e.g. Mensah" required>
+              </div>
+            </div>
+            <div class="modal__row">
+              <div class="modal__field">
+                <label class="modal__label ff-secondary" for="bc_email">Email Address <span class="modal__req">*</span></label>
+                <input class="modal__input" type="email" id="bc_email" name="email" placeholder="you@company.com" required>
+              </div>
+              <div class="modal__field">
+                <label class="modal__label ff-secondary" for="bc_phone">Phone Number</label>
+                <input class="modal__input" type="tel" id="bc_phone" name="phone" placeholder="+233 ...">
+              </div>
+            </div>
+            <div class="modal__field modal__field--full">
+              <label class="modal__label ff-secondary" for="bc_org">Organisation <span class="modal__req">*</span></label>
+              <input class="modal__input" type="text" id="bc_org" name="organisation" placeholder="Your company or organisation" required>
+            </div>
+            <div class="modal__field modal__field--full">
+              <label class="modal__label ff-secondary" for="bc_course">Course of Interest <span class="modal__req">*</span></label>
+              <select class="modal__select" id="bc_course" name="course" required>
+                <option value="" disabled selected>Select a course...</option>
+                <optgroup label="ISO Trainings">
+                  <option value="iso-45001">ISO 45001 Lead Auditor</option>
+                  <option value="iso-14001">ISO 14001 Lead Auditor</option>
+                  <option value="iso-9001">ISO 9001 Lead Auditor</option>
+                  <option value="iso-17025">ISO 17025 Lead Auditor</option>
+                </optgroup>
+                <optgroup label="First Aid">
+                  <option value="basic-first-aid">Basic First Aid</option>
+                  <option value="occ-first-aid">Occupational First Aid</option>
+                </optgroup>
+                <optgroup label="Fire Safety">
+                  <option value="fire-safety">Basic Fire Fighting</option>
+                  <option value="fire-warden">Fire Warden Training</option>
+                  <option value="fire-risk">Fire Risk Assessment</option>
+                </optgroup>
+                <optgroup label="Rescue">
+                  <option value="wah-rescue">Working at Height &amp; Rescue</option>
+                  <option value="confined-space">Confined Space Entry &amp; Rescue</option>
+                  <option value="emergency-response">Emergency Response</option>
+                </optgroup>
+                <optgroup label="Other Trainings">
+                  <option value="manual-handling">Manual Handling</option>
+                  <option value="incident-investigation">Incident Investigation</option>
+                  <option value="hseq-management">HSEQ Management</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="modal__field modal__field--full">
+              <label class="modal__label ff-secondary" for="bc_msg">Additional Notes</label>
+              <textarea class="modal__textarea" id="bc_msg" name="message" placeholder="Number of participants, preferred dates, or any special requirements..."></textarea>
+            </div>
+            <button type="submit" class="modal__submit ff-secondary">
+              Submit Booking <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -542,6 +603,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="src/stats.js"></script>
+  <button class="scroll-to-top" id="scrollToTop"><i class="fas fa-arrow-up"></i></button>
 
   <!-- Modal Script -->
   <script>
