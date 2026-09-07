@@ -5953,16 +5953,6 @@ html {
   padding: 0 24px;
 }
 
-.wwd__eyebrow {
-  display: block;
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--clr-accent-400);
-  font-family: var(--ff-secondary);
-  margin-bottom: 12px;
-}
-
 .wwd__title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
