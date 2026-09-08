@@ -65,21 +65,24 @@
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# Cache static assets aggressively
+# Images change rarely — cache a day, then revalidate (filenames are not
+# content-hashed, so "immutable" would strand updates on visitors' browsers)
 [[headers]]
   for = "/images/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=86400, must-revalidate"
 
+# CSS/JS are not fingerprinted and are edited often — always revalidate
+# (ETag makes the check a cheap 304 when nothing changed)
 [[headers]]
   for = "/src/*.css"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/src/*.js"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 # HTML pages: always revalidate
 [[headers]]
