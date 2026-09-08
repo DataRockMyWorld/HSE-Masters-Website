@@ -2325,15 +2325,6 @@ button .footer__form--button {
     margin-left: 30px;
   }
   
-  .what-we-do__row {
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .what-we-do__heading {
-    font-size: 2rem;
-  }
-  
   .mission__title,
   .vision__title {
     font-size: 1.5rem;
@@ -2899,89 +2890,133 @@ button .footer__form--button {
   box-shadow: 0 20px 50px rgba(255, 216, 8, 0.3);
 }
 
-/* What we do */
-.what-we-do {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+/* ===================================================
+   WHAT WE DO — Split (About page): full-bleed photo + ruled list
+   =================================================== */
+.wwd-split {
+  display: grid;
+  grid-template-columns: 44% 56%;
+  min-height: 560px;
+  background: #f5f7fa;
+  border-top: 1px solid #e7e9ee;
+}
+
+.wwd-split__media {
   position: relative;
   overflow: hidden;
 }
-
-.what-we-do::before {
-  content: '';
+.wwd-split__img {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255, 216, 8, 0.08) 0%, transparent 70%);
-  border-radius: 50%;
-  transform: translate(-30%, 30%);
-}
-
-.what-we-do__row {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 1;
-}
-
-.what-we-do__image {
-  flex: 1;
-  max-width: 500px;
-  animation: slideInLeft 0.8s ease-out;
-}
-
-.what-we-do__image img {
+  inset: 0;
   width: 100%;
-  border-radius: 20px;
+  height: 100%;
+  max-width: none;
   object-fit: cover;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s ease;
-  border: 5px solid white;
+  object-position: center 22%;
 }
-
-.what-we-do__image img:hover {
-  transform: scale(1.05) translateY(-10px);
-  box-shadow: 0 25px 60px rgba(255, 216, 8, 0.4);
-}
-
-.what-we-do__content {
-  flex: 1;
-  text-align: justify;
-  animation: slideInRight 0.8s ease-out;
-}
-
-.what-we-do__heading {
-  font-size: 2.8rem;
-  color: var(--clr-neutral-900);
-  margin-bottom: 30px;
-  font-family: var(--ff-secondary);
-  font-weight: bold;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 15px;
-}
-
-.what-we-do__heading::after {
-  content: '';
+.wwd-split__stat {
   position: absolute;
-  bottom: 0;
   left: 0;
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--clr-accent-400), #ffa500);
-  border-radius: 2px;
+  bottom: 0;
+  background: #f5c518;
+  padding: 16px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.wwd-split__stat-num {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+  color: #1b283a;
+}
+.wwd-split__stat-label {
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: #1b283a;
 }
 
-.what-we-do__text {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  font-family: var(--ff-secondary);
+.wwd-split__body {
+  align-self: center;
+  padding: 56px;
+  padding-left: 48px;
+}
+.wwd-split__eyebrow {
+  display: block;
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c9a227;
+  margin-bottom: 18px;
+}
+.wwd-split__heading {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.1;
+  color: #1b283a;
+  margin: 0 0 32px;
+}
+.wwd-split__list {
+  list-style: none;
+  margin: 0 0 34px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.wwd-split__item {
+  border-left: 3px solid #e4e7ec;
+  padding-left: 18px;
+  transition: border-color 0.5s ease;
+}
+.wwd-split__item.is-active {
+  border-left-color: #f5c518;
+}
+.wwd-split__item-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: #1b283a;
+  margin: 0 0 6px;
+}
+.wwd-split__item-text {
+  font-family: var(--ff-primary);
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: #5a6675;
+  margin: 0;
+}
+.wwd-split__link {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #1b283a;
+  text-decoration: none;
+  border-bottom: 2px solid #f5c518;
+  padding-bottom: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wwd-split__item {
+    transition: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .wwd-split {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .wwd-split__media {
+    height: 320px;
+  }
+  .wwd-split__body {
+    padding: 40px 24px;
+  }
 }
 
 /* Mission and vision */
@@ -4651,6 +4686,21 @@ html {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.team__image-container .team__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s ease;
+}
+
+.team__card:hover .team__image-container .team__image {
+  transform: scale(1.05);
+}
+
 .team__badge {
   position: absolute;
   top: 20px;
@@ -6089,6 +6139,11 @@ html {
   max-width: 1200px;
   margin: 0 auto 40px;
   padding: 0 24px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .fw__title {
@@ -6101,13 +6156,29 @@ html {
   color: var(--clr-accent-400);
 }
 
+.fw__viewall {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clr-accent-400);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap 0.2s ease;
+}
+
+.fw__viewall:hover {
+  gap: 12px;
+}
+
 .fw__grid {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 200px 360px 200px;
+  grid-template-columns: repeat(3, 1fr);
   gap: 6px;
 }
 
@@ -6115,6 +6186,9 @@ html {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  display: block;
+  text-decoration: none;
+  height: 340px;
 }
 
 .fw__img {
@@ -6131,40 +6205,28 @@ html {
   transform: scale(1.08);
 }
 
-.fw__panel--strip {
-  grid-column: span 2;
-}
-
 .fw__overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px 24px;
-  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, transparent 100%);
+  padding: 48px 24px 22px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.55) 42%, transparent 100%);
   z-index: 1;
 }
 
-.fw__panel--strip .fw__overlay {
-  top: 0;
-  right: auto;
-  bottom: 0;
-  width: 280px;
-  padding: 0 28px;
-  background: linear-gradient(to right, rgba(0,0,0,0.88) 0%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .fw__cat {
-  display: block;
-  font-size: 0.68rem;
-  letter-spacing: 0.18em;
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--clr-accent-400);
+  font-weight: 700;
+  color: #0d1b3e;
+  background: var(--clr-accent-400);
+  padding: 4px 9px;
+  border-radius: 2px;
   font-family: var(--ff-secondary);
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .fw__name {
@@ -6182,20 +6244,19 @@ html {
   margin-top: 5px;
 }
 
+@media (max-width: 900px) {
+  .fw__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .fw__grid {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     padding: 0 16px;
   }
   .fw__panel {
-    height: 220px;
-  }
-  .fw__panel--strip {
-    grid-column: span 1;
-  }
-  .fw__panel--strip .fw__overlay {
-    width: 180px;
+    height: 240px;
   }
 }
 
@@ -6604,7 +6665,7 @@ html {
   color: var(--clr-accent-400) !important;
 }
 .navbar__nav-link {
-  color: rgba(13,27,62,0.6) !important;
+  color: rgba(13,27,62,0.88) !important;
 }
 .navbar__nav-item:hover .navbar__nav-link {
   color: #0d1b3e !important;
@@ -6617,7 +6678,7 @@ html {
   }
   .navbar__nav-link {
     border-bottom: 1px solid rgba(13,27,62,0.06) !important;
-    color: rgba(13,27,62,0.7) !important;
+    color: rgba(13,27,62,0.9) !important;
   }
 }
 
@@ -6725,16 +6786,6 @@ html {
   color: rgba(13,27,62,0.62) !important;
 }
 
-/* --- What We Do text block (about page): off-white --- */
-.what-we-do {
-  background: #f5f7fa !important;
-}
-.what-we-do__heading {
-  color: #0d1b3e !important;
-}
-.what-we-do__text {
-  color: rgba(13,27,62,0.65) !important;
-}
 
 /* --- Original Mission / Vision section (navy) --- */
 .mission-vision {
@@ -6851,7 +6902,7 @@ html {
   box-shadow: 0 2px 20px rgba(13,27,62,0.08) !important;
 }
 .navbar--hero.scrolled .navbar__nav-link {
-  color: rgba(13,27,62,0.6) !important;
+  color: rgba(13,27,62,0.88) !important;
 }
 .navbar--hero.scrolled .navbar__nav-item:hover .navbar__nav-link {
   color: #0d1b3e !important;
@@ -6871,7 +6922,7 @@ html {
     border-top-color: rgba(13,27,62,0.08) !important;
   }
   .navbar--hero.scrolled .navbar__nav .navbar__nav-link {
-    color: rgba(13,27,62,0.7) !important;
+    color: rgba(13,27,62,0.9) !important;
   }
 }
 
@@ -7115,22 +7166,28 @@ html {
   font-family: var(--ff-secondary) !important;
 }
 
-/* Accreditation badge — bottom-left corner */
-.hero__cert {
-  position: absolute;
-  left: 0;
-  bottom: 30px;
-  z-index: 2;
-  background: #fff;
-  border-radius: 6px;
-  padding: 11px 15px;
-  box-shadow: 0 10px 34px rgba(0,0,0,0.28);
-  animation: fadeInUp 0.6s ease-out 0.5s both;
+/* Accreditation badge — reuses the .hero__stat item layout so it
+   flows in the glass panel exactly like the three stats above it */
+.hero__stat--cert {
+  border-top: 1px solid rgba(255,255,255,0.18) !important;
+  padding: 30px 36px 26px !important;
+  gap: 10px !important;
 }
-.hero__cert img {
+.hero__cert-plate {
   display: block;
-  width: 156px;
-  height: auto;
+  background: #fff;
+  border-radius: 3px;
+  padding: 7px 9px;
+  line-height: 0;
+}
+.hero__cert-plate img {
+  display: block;
+  width: 86px !important;
+  height: 40px !important;
+  max-width: none !important;
+}
+.hero__stat--cert .hero__stat-label {
+  color: rgba(255,255,255,0.66) !important;
 }
 
 /* Scroll cue */
@@ -7206,6 +7263,7 @@ html {
   }
   .hero__stats-card {
     flex-direction: row !important;
+    flex-wrap: wrap !important;
     width: 100%;
     min-width: unset;
     align-self: stretch;
@@ -7225,13 +7283,9 @@ html {
   .hero__scroll-cue {
     display: none;
   }
-  .hero__cert {
-    position: static;
-    align-self: flex-start;
-    margin-top: 24px;
-  }
-  .hero__cert img {
-    width: 140px;
+  .hero__stat--cert {
+    flex: 1 0 100% !important;
+    padding: 16px 12px !important;
   }
   .hero__media-overlay {
     background:
@@ -9410,13 +9464,15 @@ a.ctc-info-card:hover {
    Uses :not(.scrolled) for maximum specificity — must stay last.
    =================================================== */
 .navbar--hero:not(.scrolled) .navbar__nav-link {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45) !important;
 }
 .navbar--hero:not(.scrolled) .navbar__nav-item:hover .navbar__nav-link {
   color: #ffffff !important;
 }
 .navbar--hero:not(.scrolled) .navbar__hamburger {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45) !important;
 }
 
 /* ==========================================================================

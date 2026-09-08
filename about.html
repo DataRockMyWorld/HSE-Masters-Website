@@ -129,26 +129,32 @@
             </ul>
           </div>
         </section>
-        <section class="what-we-do ff-secondary">
-          <div class="container">
-            <div class="what-we-do__row">
-              <div class="what-we-do__image">
-                <!-- Replace with your inspiring image -->
-                <img loading="lazy" src="images/feat-work-2.jpeg" alt="Inspiring artwork" />
-              </div>
-              <div class="what-we-do__content">
-                <h2 class="what-we-do__heading">What We Do</h2>
-                <p class="what-we-do__text ff-secondary">
-                  As a socially responsible company, we take our environmental and social obligations seriously. We are committed to reducing our environmental footprint and promoting sustainable practices throughout our operations. We also support a range of community initiatives and charities, as we believe that it is our responsibility to give back to the communities that we serve.
-                </p>
-                <p class="what-we-do__text ff-secondary">
-                  At HSE Masters Ltd, we pride ourselves on our ability to build strong, long-lasting relationships with our clients. We believe that our success is based on our ability to understand our clients' needs and provide them with the solutions and services that they require to achieve their business goals. Our commitment to client satisfaction is reflected in our high client retention rate and our many long-term partnerships.
-                </p>
-                <p class="what-we-do__text ff-secondary">
-                  We are proud of our reputation as a trusted partner for businesses across the West African region, and we are committed to continuing to provide exceptional service and support to our clients. Contact us today to learn more about how we can help your business achieve its goals.
-                </p>
-              </div>
+        <section class="wwd-split" id="what-we-do">
+          <div class="wwd-split__media">
+            <img class="wwd-split__img" loading="lazy" src="images/wwd-training.jpg" alt="HSE Masters training session in progress">
+            <div class="wwd-split__stat">
+              <span class="wwd-split__stat-num ff-secondary">10 yrs</span>
+              <span class="wwd-split__stat-label ff-secondary">In the field</span>
             </div>
+          </div>
+          <div class="wwd-split__body">
+            <span class="wwd-split__eyebrow ff-secondary">What We Do</span>
+            <h2 class="wwd-split__heading ff-secondary">More than a<br>compliance box.</h2>
+            <ul class="wwd-split__list">
+              <li class="wwd-split__item is-active">
+                <h3 class="wwd-split__item-title ff-secondary">Responsible by default</h3>
+                <p class="wwd-split__item-text">We reduce our environmental footprint and support the communities we serve.</p>
+              </li>
+              <li class="wwd-split__item">
+                <h3 class="wwd-split__item-title ff-secondary">Built on relationships</h3>
+                <p class="wwd-split__item-text">We understand the operation before we propose anything &mdash; and clients stay.</p>
+              </li>
+              <li class="wwd-split__item">
+                <h3 class="wwd-split__item-title ff-secondary">Trusted across West Africa</h3>
+                <p class="wwd-split__item-text">A regional partner for businesses that take safety seriously.</p>
+              </li>
+            </ul>
+            <a href="contact.html" class="wwd-split__link ff-secondary">Talk to us <span aria-hidden="true">&rarr;</span></a>
           </div>
         </section>
         <!-- Mission & Vision — Split Image Panels -->
@@ -274,6 +280,36 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="src/stats.js"></script>
+  <script>
+    // "What We Do" split — walk the yellow rule down the list once, on scroll-in
+    (function () {
+      var section = document.querySelector('.wwd-split');
+      if (!section) return;
+      var items = section.querySelectorAll('.wwd-split__item');
+      if (!items.length) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      var started = false;
+      function walk() {
+        var i = 0;
+        (function step() {
+          items.forEach(function (el, idx) { el.classList.toggle('is-active', idx === i); });
+          if (++i < items.length) setTimeout(step, 1000);
+        })();
+      }
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !started) {
+            started = true;
+            walk();
+            io.disconnect();
+          }
+        });
+      }, { threshold: 0.4 });
+      io.observe(section);
+    })();
+  </script>
   <button class="scroll-to-top" id="scrollToTop"><i class="fas fa-arrow-up"></i></button>
     </body>
     </html>
