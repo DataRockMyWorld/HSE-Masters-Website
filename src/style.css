@@ -2912,7 +2912,7 @@ button .footer__form--button {
   height: 100%;
   max-width: none;
   object-fit: cover;
-  object-position: center 22%;
+  object-position: center 15%;
 }
 .wwd-split__stat {
   position: absolute;
